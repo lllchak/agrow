@@ -1,2 +1,2 @@
 # agrow
-mirror of authentic PyTorch framework with implementation of main packages
+Mirror of authentic PyTorch framework with main packages implemented
