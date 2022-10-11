@@ -1,2 +1,2 @@
-# Deep-Learning-Framework
-Implementation of Pytorch framework using no specific packages
+# agrow
+mirror of authentic PyTorch framework with implementation of main packages
