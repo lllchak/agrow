@@ -1,3 +1,4 @@
-./.ipynb_checkpoints/
+.ipynb_checkpoints/
+.idea/
 agrow/__pycache__/
 agrow/core/__pycache__/
