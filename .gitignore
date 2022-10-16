@@ -1,1 +1,3 @@
-./.ipynb_checkpoints
+./.ipynb_checkpoints/
+agrow/__pycache__/
+agrow/core/__pycache__/
