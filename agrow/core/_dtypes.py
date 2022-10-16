@@ -1,11 +1,10 @@
 import numpy as np
+from .biult_ins import int8
 
-int8 = np.dtype("int8")
-int16 = np.dtype("int16")
+int8 = int8
 
 _all_dtypes = (
 	int8,
-	int16
 )
 
 _dtype_categories = {
@@ -14,7 +13,6 @@ _dtype_categories = {
 
 _promotion_table = {
 	(int8, int8): int8,
-	(int8, int16): int16,
 }
 
 
