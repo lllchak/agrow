@@ -7,7 +7,7 @@ All of projects were built using:
 
 So there is no need in special hardware to reproduce any results.
 
-- **Note**: You can find pre-built virtual environments in `./venvs` folder 
+**Note**: You can find pre-built virtual environments in `./venvs` folder 
 if needed.
 
 That repository contains some educational NLP small projects. Here is 
