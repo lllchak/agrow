@@ -1,4 +1,8 @@
-from typing import *
+from typing import (
+    List,
+    Tuple,
+    Dict
+)
 
 
 __all__ = [

@@ -1,5 +1,7 @@
-from .tokenizer_base import BaseTokenizer
+from .base import BaseTokenizer
+from .regex import RegexTokenizer
 
 __all__ = [
-    "BaseTokenizer"
+    "BaseTokenizer",
+    "RegexTokenizer"
 ]
