@@ -1,5 +1,7 @@
 INTERPRETER=python
 BASE_INTERPRETER=python3
+SRC_DIR = .
+CACHE := $(shell find $(SRC_DIR) -name __pycache__ | sed -e 's/\.\///')
 
 # virtual environment name
 ename ?= ""
@@ -47,4 +49,8 @@ endif
 # Rule for upgrading given package
 upkg:
 	@pip install --upgrade $(pname)
+
+# Rule for cleaning trash files adn directories
+clean:
+	@rm -rf $(CACHE)
 

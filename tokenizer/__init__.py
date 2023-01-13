@@ -3,7 +3,7 @@ from .regex import (
     RegexTokenizer,
     RegexPatternTokenizer
 )
-from .punct import PunctRegex
+from .punct import PunctTokenizer
 from .tokenizer import (
     WhitespaceTokenizer,
     NaivePunctTokenizer
@@ -15,5 +15,5 @@ __all__ = [
     "RegexPatternTokenizer",
     "WhitespaceTokenizer",
     "NaivePunctTokenizer",
-    "PunctRegex"
+    "PunctTokenizer"
 ]
