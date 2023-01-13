@@ -3,10 +3,10 @@ from .regex import (
     RegexTokenizer,
     RegexPatternTokenizer
 )
-from .punct import PunctTokenizer
 from .tokenizer import (
     WhitespaceTokenizer,
-    NaivePunctTokenizer
+    NaivePunctTokenizer,
+    PunctTokenizer
 )
 
 __all__ = [
