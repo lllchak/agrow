@@ -73,8 +73,9 @@ class PunctRegex(BaseTokenizer):
 
     def tokenize(self, string: str) -> dtypes.List[str]:
         """
-        Tokenizes a string to a list of tokens using pre-compiled regular
-        expression. Splits of punctuation from words.
+        Tokenizes a string (sentence/context) to a list of tokens 
+        using pre-compiled regular expression. Splits of punctuation 
+        from words.
 
         Args:
             string (str) : String to be tokenized
@@ -82,6 +83,7 @@ class PunctRegex(BaseTokenizer):
         Returns:
             List of tokens, i.e "string to tokenize" -> ["string", "to", "tokenize"]
         """
+        
         return self.gstring_re.findall(string)
 
 
