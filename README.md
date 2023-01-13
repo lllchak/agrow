@@ -16,7 +16,7 @@ Despite you can use pre-installed virtual environments, it is also available to 
 ```bash
 make cenv ename=<NEW_ENV_NAME>
 ```
-**Note**: make sure you activated created environment right after you installed it (`source venvs/<NEW_ENV_NAME>/bin/activate). It would help you to avoid global dependency installing problem.
+**Note**: make sure you activated created environment right after you installed it (`source venvs/<NEW_ENV_NAME>/bin/activate`). It would help you to avoid global dependency installing problem.
 
 After environment is installed (installs in `./venvs` folder by default. Intalling to provided directory is yet to come) you can add dependecies from provided requirements file to it running
 ```bash
