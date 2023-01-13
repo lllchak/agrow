@@ -75,3 +75,18 @@ class RegexTokenizer(BaseTokenizer):
             if self.remove_empty: return [tk for tk in self.regex.split(string) if tk]
             else: return self.regex.split(string)
         else: return self.regex.findall(string)
+
+
+class RegexPatternTokenizer(RegexTokenizer):
+    """
+    Tokenizer string with provided regular expression pattern. You can
+    initialize RegexPatternTokenizer with your custom regular expression.
+    It inherits from RegexTokenizer (inherits all methods).
+    """
+
+    def __init__(self, pattern: str) -> None:
+        """
+        Initializes RegexPatternTokenizer with given regular expression pattern.
+        """
+
+        RegexTokenizer.__init__(self, pattern=pattern)
