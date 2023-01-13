@@ -3,6 +3,7 @@ import dtypes
 
 from tokenizer import BaseTokenizer
 
+
 class RegexTokenizer(BaseTokenizer):
     """
     Regex tokenizer base class. Inherit tokenizer, stokenize and gstopwords
