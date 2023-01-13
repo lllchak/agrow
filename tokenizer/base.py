@@ -56,7 +56,7 @@ class BaseTokenizer(ABC):
         return [self.tokenize(string) for string in strings]
 
     @classmethod
-    def gstopwords(language: str) -> dtypes.List[str]:
+    def gstopwords(cls, language: str) -> dtypes.List[str]:
         """
         Method to get given language stopwords
 
