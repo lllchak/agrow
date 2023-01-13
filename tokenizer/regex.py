@@ -19,7 +19,7 @@ class RegexTokenizer(BaseTokenizer):
     ) -> None:
         """
         Initializes RegexTokenizer object with given parameters. Also
-        comples regular expression
+        compiles regular expression.
 
         Args:
             pattern (str)         : Pattern in rstring (regex string) representation
