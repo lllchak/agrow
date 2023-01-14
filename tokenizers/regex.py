@@ -1,7 +1,7 @@
 import re
 import dtypes
 
-from tokenizer import BaseTokenizer
+from tokenizers import BaseTokenizer
 
 
 class RegexTokenizer(BaseTokenizer):

@@ -1,7 +1,7 @@
 import re
 
 import dtypes
-from tokenizer import (
+from tokenizers import (
     BaseTokenizer,
     RegexTokenizer,
 )
