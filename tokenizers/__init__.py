@@ -1,8 +1,5 @@
 from .base import BaseTokenizer
-from .regex import (
-    RegexTokenizer,
-    RegexPatternTokenizer
-)
+from .regex import RegexTokenizer
 from .tokenizer import (
     WhitespaceTokenizer,
     NaivePunctTokenizer,
@@ -12,7 +9,6 @@ from .tokenizer import (
 __all__ = [
     "BaseTokenizer",
     "RegexTokenizer",
-    "RegexPatternTokenizer",
     "WhitespaceTokenizer",
     "NaivePunctTokenizer",
     "PunctTokenizer"
