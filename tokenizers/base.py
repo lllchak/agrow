@@ -7,10 +7,9 @@ import dtypes
 
 class BaseTokenizer(ABC):
     """
-    Tokenizer abstract class. It defines method for performing
-    tokenization and getting dictionary stopwords (from nltk library).
-    tokenize(self, string) and/or stokenize(strings) (for many sentences)
-    could be overridden.
+    Tokenizer abstract class. It defines abstract methods for performing
+    tokenization. tokenize(self, string) and/or stokenize(strings) 
+    (for many sentences) could be overridden.
 
     Note: Override tokenize(...) and/or stokenize(...) (if neeeded) to perform 
           tokenization.
@@ -54,21 +53,3 @@ class BaseTokenizer(ABC):
         """
 
         return [self.tokenize(string) for string in strings]
-
-    @classmethod
-    def gstopwords(cls, language: str) -> dtypes.List[str]:
-        """
-        Method to get given language stopwords
-
-        Args:
-            language (str) : Language to get stopwords from
-
-        Returns:
-            List of stopwords
-        """
-
-        import nltk
-        from nltk.corpus import stopwords
-        nltk.download("stopwords")
-
-        return stopwords.words(language)
