@@ -15,8 +15,10 @@ VectorizedOutput = dtypes.List[dtypes.List[str]]
 class BaseVectorizer(ABC):
     """
     Vectorizer base class. It defines abstract methods for performing 
-    vectorization. fit(...), tranform(...) and fit_transform(...) methods
-    should be overwritten to perform text vectorization.
+    vectorization. 
+    
+    Note: fit(...), tranform(...) and fit_transform(...) methods
+          should be overwritten to perform text vectorization.
     """
 
     """
