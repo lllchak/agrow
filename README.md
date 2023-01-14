@@ -31,4 +31,3 @@ make idep pname=<PACKAGE_NAME>
 That repository contains some educational NLP small projects. Here is 
 the list of projects have been implemented at the moment:
 - [Tokenizer](./tokenizer)
-- [Word2Vec](./word2vec/)
