@@ -89,6 +89,19 @@ class CountVectorizer(BaseVectorizer):
         input: CorpusInput, 
         ignore_stopwords: bool
     ) -> None:
+        """
+        Creating corpus vocabulary (fitting wrapper) method. Creates corpus vocabulary
+        adding token one-by-one while walking through each of the tokens (in fact, just
+        flatten given multidimensional corpus into 1d vector).
+
+        Args:
+            input (CorpusInput)     : Corpus to fit with
+            ignore_stopwords (bool) : If ignore corpus stopwords or not flag
+
+        Returns:
+            None (only creates corpus vocabulary)
+        """
+
         self.tk_: dtypes.Any = PunctTokenizer()
         self.corpus_: dtypes.List[str] = []
         lstopwords: dtypes.List[str] = self.lang_stopwords_
@@ -115,7 +128,18 @@ class CountVectorizer(BaseVectorizer):
         del tunique
         gc.collect()
 
-    def __trsent(self, input: dtypes.List[str]) -> dtypes.List[int]:
+    def __trsent(self, input: str) -> dtypes.List[int]:
+        """
+        Transforming single given string (sentence/context) method. Calls by tranform(...)
+        to vectorize full corpus.
+
+        Args:
+            input (str) : String (sentence/context) to be vectorized
+
+        Returns:
+            Vectorized string (sentence/context)
+        """
+
         input_tokens: dtypes.List[str] = self.tk_.tokenize(input)
         res_vec = [0] * len(self.corpus_)
 
@@ -129,6 +153,16 @@ class CountVectorizer(BaseVectorizer):
         return res_vec
 
     def __check_input(self, input: CorpusInput) -> dtypes.List[str]:
+        """
+        Checking provided corpus validity method.
+
+        Args:
+            input (CorpusInput) : Corpus to be checked
+
+        Returns:
+            None (raises error if corpus is invalid) or corpus in appropriate view 
+        """
+
         if isinstance(input, str): input = [input]
         if not all(isinstance(sent, str) for sent in input):
             raise TypeError(
@@ -143,6 +177,18 @@ class CountVectorizer(BaseVectorizer):
         tokens: dtypes.List[str],
         curr_idx: int
     ) -> str:
+        """
+        Preprocessing separate token method.
+
+        Args:
+            tok (str)                 : Token to be preprocessed
+            tokens (dtypes.List[str]) : All string (sentence/context) tokens array
+            curr_idx (int)            : Source tokens array index
+
+        Returns:
+            Preprocessed token
+        """
+
         tok = tok.lower()
         if tok[-1] == '.' and curr_idx == len(tokens) - 1: tok = tok[:-1]
 
