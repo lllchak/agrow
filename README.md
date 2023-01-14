@@ -2,7 +2,6 @@
 ### Environment
 All of projects were built using:
 - Python 3.10.6 (pip 22.3.1)
-- make
 - WSL Ubuntu 20.04
 - Colab (mostly like a terminal with GPU)
 
