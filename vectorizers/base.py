@@ -44,7 +44,6 @@ class BaseVectorizer(ABC):
     def fit_transform(self, input: CorpusInput) -> VectorizedOutput:
         raise NotImplementedError("Base class methods should be overwritten")
 
-
     @property
     def lang_stopwords_(self, language: str = "english") -> dtypes.List[str]:
         return stopwords.words(language)
