@@ -28,6 +28,13 @@ Or install exact dependency(-ies) running
 make idep pname=<PACKAGE_NAME>
 ```
 
+### Subprojects directories
 That repository contains some educational NLP small projects. Here is 
 the list of projects have been implemented at the moment:
 - [Tokenizers](./tokenizers)
+
+Here you can find different tokenizers implementations (mostly based on regular expressions extraction).
+
+- [Vectorizers](./vectorizers/)
+
+Here there are some implementations of sentences vectorizers (count-based only). You can find more advanced approaches in `./embedders` (yet to come).
