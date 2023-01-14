@@ -6,6 +6,7 @@ from vectorizers import BaseVectorizer
 from tokenizers import PunctTokenizer
 
 CorpusInput = dtypes.Union[dtypes.List[str], str]
+VectorizedOutput = dtypes.List[dtypes.List[str]]
 
 
 class CountVectorizer(BaseVectorizer):
@@ -25,23 +26,25 @@ class CountVectorizer(BaseVectorizer):
         self,
         input: CorpusInput,
         ignore_stopwords: bool = True
-    ):
-        if isinstance(input, str): input = [input]
-        if not all(isinstance(sent, str) for sent in input):
-            raise TypeError(
-                "Input corpus should be a list of strings or a string."
-            )
+    ) -> None:
+        input = self.__check_input(input)
 
         self.__ccorpus(input=input, ignore_stopwords=ignore_stopwords)
 
-    def transform(self, input: CorpusInput) -> dtypes.List[dtypes.List[str]]:
-        if isinstance(input, str): input = [input]
-        if not all(isinstance(sent, str) for sent in input):
-            raise TypeError(
-                "Input corpus should be a list of strings or a string."
-            )
+    def transform(self, input: CorpusInput) -> VectorizedOutput:
+        input = self.__check_input(input)
 
         return [self.__trsent(sent) for sent in input]
+
+    def fit_transform(
+        self, 
+        input: CorpusInput,
+        ignore_stopwords: bool = True
+    ) -> VectorizedOutput:
+        input = self.__check_input(input)
+
+        self.fit(input=input, ignore_stopwords=ignore_stopwords)
+        return self.transform(input)
 
     def __ccorpus(
         self, 
@@ -79,11 +82,22 @@ class CountVectorizer(BaseVectorizer):
         res_vec = [0] * len(self.corpus_)
 
         for idx, tok in enumerate(input_tokens):
+            # In case we can't process tokens like "end." and "end" at the end 
+            # of string (sentence/context) like different tokens.
             tok = self.__preprocess_tok(tok=tok, tokens=input_tokens, curr_idx=idx)
             if tok in self.corpus_:
                 res_vec[self.indices_[tok]] += 1
 
         return res_vec
+
+    def __check_input(self, input: CorpusInput) -> dtypes.List[str]:
+        if isinstance(input, str): input = [input]
+        if not all(isinstance(sent, str) for sent in input):
+            raise TypeError(
+                "Input corpus should be a list of strings or a string."
+            )
+
+        return input
 
     def __preprocess_tok(
         self,

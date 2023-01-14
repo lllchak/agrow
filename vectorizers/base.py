@@ -3,6 +3,8 @@ from abc import (
     abstractmethod
 )
 import nltk
+from nltk.corpus import stopwords
+nltk.download("stopwords")
 
 import dtypes
 
@@ -45,8 +47,4 @@ class BaseVectorizer(ABC):
 
     @property
     def lang_stopwords_(self, language: str = "english") -> dtypes.List[str]:
-        import nltk
-        from nltk.corpus import stopwords
-        nltk.download("stopwords")
-
         return stopwords.words(language)
