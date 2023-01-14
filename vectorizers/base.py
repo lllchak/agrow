@@ -67,7 +67,7 @@ class BaseVectorizer(ABC):
         Abstract given corpus (could be one sentence or a list of sentences)
         tranforming method. After vectorizer is fitted we can tranform given
         corpus. Realizations could vary a lot due to different vectorization
-        approaches (Count, TF-IDF, etc.)
+        approaches (Count, TF-IDF, etc.).
 
         Args:
             input (CorpusInput) : Corpus to be vectorized. Could be one sentence or 
@@ -89,7 +89,7 @@ class BaseVectorizer(ABC):
         Abstract given corpus (could be one sentence of a list of sentences)
         fitting and tranforming method. According to the idea, simply - a wrapper
         above fit(...) and tranform(...) methods, tranforms given corpus after 
-        fitting vectorizer on a it (corpus)
+        fitting vectorizer on a it (corpus).
 
         Args:
             input (CorpusInput)     : Corpus to fit with and which to transform after.
