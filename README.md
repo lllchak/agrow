@@ -28,7 +28,7 @@ Or install exact dependency(-ies) running
 make idep pname=<PACKAGE_NAME>
 ```
 
-### Subprojects directories
+### Subprojects structure
 That repository contains some educational NLP small projects. Here is 
 the list of projects have been implemented at the moment:
 - [Tokenizers](./tokenizers)
