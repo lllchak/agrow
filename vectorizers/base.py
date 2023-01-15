@@ -39,9 +39,12 @@ class BaseVectorizer(ABC):
     indices_: dtypes.Dict[str, int] = {}
     invindices_: dtypes.Dict[int, str] = {}
 
-    @abstractmethod
     def __repr__(self) -> str:
-        return f"{self.__class__.__name__}()"
+        return "{}(size={}, stopwords={})".format(
+            self.__class__.__name__,
+            len(self.corpus_),
+            self.stopwords_
+        )
 
     @abstractmethod
     def fit(

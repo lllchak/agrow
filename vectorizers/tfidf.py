@@ -23,13 +23,6 @@ class TfidfVectorizer(BaseVectorizer):
         "vidf_"
     ]
 
-    def __repr__(self) -> str:
-        return "{}(size={}, stopwords={})".format(
-            self.__class__.__name__,
-            len(self.corpus_),
-            self.stopwords_
-        )
-
     def fit(
         self,
         input: CorpusInput,

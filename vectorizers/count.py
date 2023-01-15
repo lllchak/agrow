@@ -10,16 +10,9 @@ VectorizedOutput = dtypes.List[dtypes.List[str]]
 
 class CountVectorizer(BaseVectorizer):
     """
-    Count vectorizer based on Bag-of-Words (BoW) approach class. It simply 
-    transforms input corpus into vector(-s) of token occurances.
+    Count vectorizer based on Bag-of-Words (BoW) approach class. 
+    Transforms input corpus into vector(-s) of token occurances.
     """
-
-    def __repr__(self) -> str:
-        return "{}(size={}, stopwords={})".format(
-            self.__class__.__name__,
-            len(self.corpus_),
-            self.stopwords_
-        )
 
     def fit(
         self,
