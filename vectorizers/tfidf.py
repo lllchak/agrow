@@ -1,7 +1,12 @@
 import math
 
-import dtypes
-from vectorizers import BaseVectorizer
+from vectorizers import (
+    BaseVectorizer,
+    dtypes
+)
+
+CorpusInput = dtypes.Union[dtypes.List[str], str]
+VectorizedOutput = dtypes.List[dtypes.List[str]]
 
 
 class TfidfVectorizer(BaseVectorizer):
@@ -14,3 +19,13 @@ class TfidfVectorizer(BaseVectorizer):
         return "{}()".format(
             self.__class__.__name__
         )
+
+    def fit(
+        self,
+        input: CorpusInput,
+        ignore_stopwords: bool = True 
+    ) -> None:
+        pass
+
+    def __ccorpus(self):
+        pass
