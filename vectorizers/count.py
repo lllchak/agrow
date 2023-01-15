@@ -35,7 +35,7 @@ class CountVectorizer(BaseVectorizer):
 
         input = self._check_input(input)
 
-        self._ccorpus(
+        self._cvocab(
             input=input, 
             ignore_stopwords=ignore_stopwords,
             tokenizer=tokenizer

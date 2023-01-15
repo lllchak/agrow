@@ -116,7 +116,7 @@ class BaseVectorizer(ABC):
     def lang_stopwords_(self, language: str = "english") -> dtypes.List[str]:
         return stopwords.words(language)
 
-    def _ccorpus(
+    def _cvocab(
         self, 
         input: CorpusInput, 
         ignore_stopwords: bool,
