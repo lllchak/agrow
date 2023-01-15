@@ -1,4 +1,4 @@
-import math
+from math import log
 
 from tokenizers import PunctTokenizer
 from vectorizers import (
@@ -139,7 +139,7 @@ class TfidfVectorizer(BaseVectorizer):
                         curr_idx=idx
                     )
                     cnt += word == tok
-            self.vidf_[word] = 1 + math.log((1 + len(input)) / (1 + cnt))
+            self.vidf_[word] = 1 + log((1 + len(input)) / (1 + cnt))
 
     def __trsent(self, input: str) -> dtypes.List[str]:
         """
