@@ -125,7 +125,7 @@ class TfidfVectorizer(BaseVectorizer):
             cnt: int = 0
             for sent in input:
                 sent_tokens: dtypes.List[str] = self.tk_().tokenize(sent)
-                for idx, tok in enumerate(sent_tokens):
+                for idx, tok in enumerate(set(sent_tokens)):
                     tok = self._preprocess_tok(
                         tok=tok,
                         tokens=sent_tokens,
@@ -149,8 +149,6 @@ class TfidfVectorizer(BaseVectorizer):
         input_tokens: dtypes.List[str] = self.tk_().tokenize(input)
         res_vec = [0] * len(self.corpus_)
 
-        print(input_tokens)
-
         for idx, tok in enumerate(input_tokens):
             # In case we can't process tokens like "end." and "end" at the end 
             # of string (sentence/context) like different tokens.
@@ -160,6 +158,6 @@ class TfidfVectorizer(BaseVectorizer):
 
         for tok in input_tokens:
             if tok in self.corpus_:
-                res_vec[self.indices_[tok]] /= self.vidf_[tok]
+                res_vec[self.indices_[tok]] *= self.vidf_[tok]
 
         return res_vec
