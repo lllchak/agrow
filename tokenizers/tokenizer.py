@@ -1,9 +1,9 @@
 import re
 
-import dtypes
 from tokenizers import (
     BaseTokenizer,
     RegexTokenizer,
+    dtypes
 )
 
 
