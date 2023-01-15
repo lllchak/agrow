@@ -25,7 +25,8 @@ class CountVectorizer(BaseVectorizer):
     def fit(
         self,
         input: CorpusInput,
-        ignore_stopwords: bool = True
+        ignore_stopwords: bool = True,
+        tokenizer: dtypes.Any = PunctTokenizer
     ) -> None:
         """
         You can find more complete docs at ./base.py
@@ -42,7 +43,11 @@ class CountVectorizer(BaseVectorizer):
 
         input = self._check_input(input)
 
-        self.__ccorpus(input=input, ignore_stopwords=ignore_stopwords)
+        self.__ccorpus(
+            input=input, 
+            ignore_stopwords=ignore_stopwords,
+            tokenizer=tokenizer
+        )
 
     def transform(self, input: CorpusInput) -> VectorizedOutput:
         """
@@ -64,7 +69,8 @@ class CountVectorizer(BaseVectorizer):
     def fit_transform(
         self,
         input: CorpusInput,
-        ignore_stopwords: bool = True
+        ignore_stopwords: bool = True,
+        tokenizer: dtypes.Any = PunctTokenizer
     ) -> VectorizedOutput:
         """
         You can find more complete docs at ./base.py
@@ -81,13 +87,19 @@ class CountVectorizer(BaseVectorizer):
 
         input = self._check_input(input)
 
-        self.fit(input=input, ignore_stopwords=ignore_stopwords)
+        self.fit(
+            input=input, 
+            ignore_stopwords=ignore_stopwords,
+            tokenizer=tokenizer
+        )
+        
         return self.transform(input)
 
     def __ccorpus(
         self, 
         input: CorpusInput, 
-        ignore_stopwords: bool
+        ignore_stopwords: bool,
+        tokenizer: dtypes.Any
     ) -> None:
         """
         Creating corpus vocabulary (fitting wrapper) method. Creates corpus vocabulary
@@ -102,11 +114,11 @@ class CountVectorizer(BaseVectorizer):
             None (only creates corpus vocabulary)
         """
 
-        self.tk_: PunctTokenizer = PunctTokenizer()
+        self.tk_: dtypes.Any = tokenizer
         lstopwords: dtypes.List[str] = self.lang_stopwords_
 
         for sent in input:
-            tokens: dtypes.List[str] = self.tk_.tokenize(sent)
+            tokens: dtypes.List[str] = self.tk_().tokenize(sent)
             for idx, tok in enumerate(tokens):
                 # In case we can't process tokens like "end." and "end" at the end 
                 # of string (sentence/context) like different tokens.
@@ -133,7 +145,7 @@ class CountVectorizer(BaseVectorizer):
             Vectorized string (sentence/context)
         """
 
-        input_tokens: dtypes.List[str] = self.tk_.tokenize(input)
+        input_tokens: dtypes.List[str] = self.tk_().tokenize(input)
         res_vec = [0] * len(self.corpus_)
 
         for idx, tok in enumerate(input_tokens):
