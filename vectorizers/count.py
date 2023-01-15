@@ -1,4 +1,3 @@
-from .utils import is_punct
 from vectorizers import (
     BaseVectorizer,
     dtypes
@@ -43,7 +42,7 @@ class CountVectorizer(BaseVectorizer):
 
         input = self._check_input(input)
 
-        self.__ccorpus(
+        self._ccorpus(
             input=input, 
             ignore_stopwords=ignore_stopwords,
             tokenizer=tokenizer
@@ -88,50 +87,12 @@ class CountVectorizer(BaseVectorizer):
         input = self._check_input(input)
 
         self.fit(
-            input=input, 
+            input=input,
             ignore_stopwords=ignore_stopwords,
             tokenizer=tokenizer
         )
-        
+
         return self.transform(input)
-
-    def __ccorpus(
-        self, 
-        input: CorpusInput, 
-        ignore_stopwords: bool,
-        tokenizer: dtypes.Any
-    ) -> None:
-        """
-        Creating corpus vocabulary (fitting wrapper) method. Creates corpus vocabulary
-        adding token one-by-one while walking through each of the tokens (in fact, just
-        flatten given multidimensional corpus into 1d vector).
-
-        Args:
-            input (CorpusInput)     : Corpus to fit with
-            ignore_stopwords (bool) : If ignore corpus stopwords or not flag
-
-        Returns:
-            None (only creates corpus vocabulary)
-        """
-
-        self.tk_: dtypes.Any = tokenizer
-        lstopwords: dtypes.List[str] = self.lang_stopwords_
-
-        for sent in input:
-            tokens: dtypes.List[str] = self.tk_().tokenize(sent)
-            for idx, tok in enumerate(tokens):
-                # In case we can't process tokens like "end." and "end" at the end 
-                # of string (sentence/context) like different tokens.
-                tok = self._preprocess_tok(tok=tok, tokens=tokens, curr_idx=idx)
-
-                if not is_punct(tok) and tok not in self.corpus_:
-                    if tok not in lstopwords: self.corpus_.add(tok)
-                    else:
-                        if ignore_stopwords: self.corpus_.add(tok) 
-                        self.stopwords_.append(tok)
-
-        self.indices_ = {word: idx for idx, word in enumerate(sorted(self.corpus_))}
-        self.invindices_ = {idx: word for idx, word in enumerate(sorted(self.corpus_))}
 
     def __trsent(self, input: str) -> dtypes.List[int]:
         """
