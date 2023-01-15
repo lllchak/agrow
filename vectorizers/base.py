@@ -7,6 +7,7 @@ from nltk.corpus import stopwords
 nltk.download("stopwords")
 
 import dtypes
+from .utils import is_punct
 
 CorpusInput = dtypes.Union[dtypes.List[str], str]
 VectorizedOutput = dtypes.List[dtypes.List[str]]
@@ -32,12 +33,9 @@ class BaseVectorizer(ABC):
         5. invindices_ - Inversed (vocabulary element: its index) mapping 
                          dictionary (vocab. element index: its value).
     """
-    __slots__ = [
-        "tk_"
-    ]
-
-    corpus_: dtypes.Set[str] = set()
     stopwords_: dtypes.List[str] = []
+    corpus_: dtypes.Set[str] = set()
+    tk_: dtypes.Any = None
     indices_: dtypes.Dict[str, int] = {}
     invindices_: dtypes.Dict[int, str] = {}
 
@@ -114,6 +112,44 @@ class BaseVectorizer(ABC):
     @property
     def lang_stopwords_(self, language: str = "english") -> dtypes.List[str]:
         return stopwords.words(language)
+
+    def _ccorpus(
+        self, 
+        input: CorpusInput, 
+        ignore_stopwords: bool,
+        tokenizer: dtypes.Any
+    ) -> None:
+        """
+        Creating corpus vocabulary (fitting wrapper) method. Creates corpus vocabulary
+        adding token one-by-one while walking through each of the tokens (in fact, just
+        flatten given multidimensional corpus into 1d vector).
+
+        Args:
+            input (CorpusInput)     : Corpus to fit with
+            ignore_stopwords (bool) : If ignore corpus stopwords or not flag
+
+        Returns:
+            None (only creates corpus vocabulary)
+        """
+
+        self.tk_: dtypes.Any = tokenizer
+        lstopwords: dtypes.List[str] = self.lang_stopwords_
+
+        for sent in input:
+            tokens: dtypes.List[str] = self.tk_().tokenize(sent)
+            for idx, tok in enumerate(tokens):
+                # In case we can't process tokens like "end." and "end" at the end 
+                # of string (sentence/context) like different tokens.
+                tok = self._preprocess_tok(tok=tok, tokens=tokens, curr_idx=idx)
+
+                if not is_punct(tok) and tok not in self.corpus_:
+                    if tok not in lstopwords: self.corpus_.add(tok)
+                    else:
+                        if ignore_stopwords: self.corpus_.add(tok) 
+                        self.stopwords_.append(tok)
+
+        self.indices_ = {word: idx for idx, word in enumerate(sorted(self.corpus_))}
+        self.invindices_ = {idx: word for idx, word in enumerate(sorted(self.corpus_))}
 
     def _preprocess_tok(
         self,
