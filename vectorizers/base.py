@@ -110,3 +110,45 @@ class BaseVectorizer(ABC):
     @property
     def lang_stopwords_(self, language: str = "english") -> dtypes.List[str]:
         return stopwords.words(language)
+
+    def __preprocess_tok(
+        self,
+        tok: str,
+        tokens: dtypes.List[str],
+        curr_idx: int
+    ) -> str:
+        """
+        Preprocessing separate token method.
+
+        Args:
+            tok (str)                 : Token to be preprocessed
+            tokens (dtypes.List[str]) : All string (sentence/context) tokens array
+            curr_idx (int)            : Source tokens array index
+
+        Returns:
+            Preprocessed token
+        """
+
+        tok = tok.lower()
+        if tok[-1] == '.' and curr_idx == len(tokens) - 1: tok = tok[:-1]
+
+        return tok
+
+    def __check_input(self, input: CorpusInput) -> dtypes.List[str]:
+        """
+        Checking provided corpus validity method.
+
+        Args:
+            input (CorpusInput) : Corpus to be checked
+
+        Returns:
+            None (raises error if corpus is invalid) or corpus in appropriate view 
+        """
+
+        if isinstance(input, str): input = [input]
+        if not all(isinstance(sent, str) for sent in input):
+            raise TypeError(
+                "Input corpus should be a list of strings or a string."
+            )
+
+        return input

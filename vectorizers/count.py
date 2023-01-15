@@ -42,7 +42,7 @@ class CountVectorizer(BaseVectorizer):
             None (only creates corpus vocabulary)
         """
 
-        input = self.__check_input(input)
+        input = self._BaseVectorizer__check_input(input)
 
         self.__ccorpus(input=input, ignore_stopwords=ignore_stopwords)
 
@@ -59,7 +59,7 @@ class CountVectorizer(BaseVectorizer):
             Vectorized corpus
         """
 
-        input = self.__check_input(input)
+        input = self._BaseVectorizer__check_input(input)
 
         return [self.__trsent(sent) for sent in input]
 
@@ -81,7 +81,7 @@ class CountVectorizer(BaseVectorizer):
             Vectorized corpus
         """
 
-        input = self.__check_input(input)
+        input = self._BaseVectorizer__check_input(input)
 
         self.fit(input=input, ignore_stopwords=ignore_stopwords)
         return self.transform(input)
@@ -115,7 +115,7 @@ class CountVectorizer(BaseVectorizer):
             for idx, tok in enumerate(tokens):
                 # In case we can't process tokens like "end." and "end" at the end 
                 # of string (sentence/context) like different tokens.
-                tok = self.__preprocess_tok(tok=tok, tokens=tokens, curr_idx=idx)
+                tok = self._BaseVectorizer__preprocess_tok(tok=tok, tokens=tokens, curr_idx=idx)
 
                 if not is_punct(tok) and tok not in tunique:
                     if tok not in lstopwords: self.corpus_.append(tok)
@@ -148,53 +148,9 @@ class CountVectorizer(BaseVectorizer):
         for idx, tok in enumerate(input_tokens):
             # In case we can't process tokens like "end." and "end" at the end 
             # of string (sentence/context) like different tokens.
-            tok = self.__preprocess_tok(tok=tok, tokens=input_tokens, curr_idx=idx)
+            tok = self._BaseVectorizer__preprocess_tok(tok=tok, tokens=input_tokens, curr_idx=idx)
             if tok in self.corpus_:
                 res_vec[self.indices_[tok]] += 1
 
         return res_vec
-
-    def __check_input(self, input: CorpusInput) -> dtypes.List[str]:
-        """
-        Checking provided corpus validity method.
-
-        Args:
-            input (CorpusInput) : Corpus to be checked
-
-        Returns:
-            None (raises error if corpus is invalid) or corpus in appropriate view 
-        """
-
-        if isinstance(input, str): input = [input]
-        if not all(isinstance(sent, str) for sent in input):
-            raise TypeError(
-                "Input corpus should be a list of strings or a string."
-            )
-
-        return input
-
-    def __preprocess_tok(
-        self,
-        tok: str,
-        tokens: dtypes.List[str],
-        curr_idx: int
-    ) -> str:
-        """
-        Preprocessing separate token method.
-
-        Args:
-            tok (str)                 : Token to be preprocessed
-            tokens (dtypes.List[str]) : All string (sentence/context) tokens array
-            curr_idx (int)            : Source tokens array index
-
-        Returns:
-            Preprocessed token
-        """
-
-        tok = tok.lower()
-        if tok[-1] == '.' and curr_idx == len(tokens) - 1: tok = tok[:-1]
-
-        return tok
-
-        
         
