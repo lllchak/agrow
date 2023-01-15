@@ -33,11 +33,13 @@ class BaseVectorizer(ABC):
                          dictionary (vocab. element index: its value).
     """
     __slots__ = [
-        "tk_", "indices_", "invindices_"
+        "tk_"
     ]
 
     corpus_: dtypes.Set[str] = set()
     stopwords_: dtypes.List[str] = []
+    indices_: dtypes.Dict[str, int] = {}
+    invindices_: dtypes.Dict[int, str] = {}
 
     @abstractmethod
     def __repr__(self) -> str:
