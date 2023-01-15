@@ -1,5 +1,3 @@
-import gc
-
 from .utils import is_punct
 from vectorizers import (
     BaseVectorizer,
@@ -106,7 +104,6 @@ class CountVectorizer(BaseVectorizer):
 
         self.tk_: PunctTokenizer = PunctTokenizer()
         lstopwords: dtypes.List[str] = self.lang_stopwords_
-        tunique: dtypes.Set = set()
 
         for sent in input:
             tokens: dtypes.List[str] = self.tk_.tokenize(sent)
@@ -115,18 +112,14 @@ class CountVectorizer(BaseVectorizer):
                 # of string (sentence/context) like different tokens.
                 tok = self._preprocess_tok(tok=tok, tokens=tokens, curr_idx=idx)
 
-                if not is_punct(tok) and tok not in tunique:
-                    if tok not in lstopwords: self.corpus_.append(tok)
+                if not is_punct(tok) and tok not in self.corpus_:
+                    if tok not in lstopwords: self.corpus_.add(tok)
                     else:
-                        if ignore_stopwords: self.corpus_.append(tok) 
+                        if ignore_stopwords: self.corpus_.add(tok) 
                         self.stopwords_.append(tok)
-                    tunique.add(tok)
 
         self.indices_ = {word: idx for idx, word in enumerate(sorted(self.corpus_))}
         self.invindices_ = {idx: word for idx, word in enumerate(sorted(self.corpus_))}
-
-        del tunique
-        gc.collect()
 
     def __trsent(self, input: str) -> dtypes.List[int]:
         """

@@ -36,7 +36,7 @@ class BaseVectorizer(ABC):
         "tk_", "indices_", "invindices_"
     ]
 
-    corpus_: dtypes.List[str] = []
+    corpus_: dtypes.Set[str] = set()
     stopwords_: dtypes.List[str] = []
 
     @abstractmethod
