@@ -1,3 +1,5 @@
+import dtypes
+
 from .base import BaseTokenizer
 from .regex import RegexTokenizer
 from .tokenizer import (
