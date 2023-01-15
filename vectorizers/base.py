@@ -113,7 +113,7 @@ class BaseVectorizer(ABC):
     def lang_stopwords_(self, language: str = "english") -> dtypes.List[str]:
         return stopwords.words(language)
 
-    def __preprocess_tok(
+    def _preprocess_tok(
         self,
         tok: str,
         tokens: dtypes.List[str],
@@ -136,7 +136,7 @@ class BaseVectorizer(ABC):
 
         return tok
 
-    def __check_input(self, input: CorpusInput) -> dtypes.List[str]:
+    def _check_input(self, input: CorpusInput) -> dtypes.List[str]:
         """
         Checking provided corpus validity method.
 
