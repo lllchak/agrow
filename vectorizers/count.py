@@ -104,10 +104,8 @@ class CountVectorizer(BaseVectorizer):
             None (only creates corpus vocabulary)
         """
 
-        self.tk_: dtypes.Any = PunctTokenizer()
-        self.corpus_: dtypes.List[str] = []
+        self.tk_: PunctTokenizer = PunctTokenizer()
         lstopwords: dtypes.List[str] = self.lang_stopwords_
-        self.stopwords_: dtypes.List[str] = []
         tunique: dtypes.Set = set()
 
         for sent in input:
