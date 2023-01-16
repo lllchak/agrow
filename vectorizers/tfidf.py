@@ -116,12 +116,12 @@ class TfidfVectorizer(BaseVectorizer):
 
         self.vidf_: dtypes.Dict[str, float] = {}
 
-        if not self.corpus_: 
+        if not self.vocab_: 
             raise AttributeError(
                 "Vectorizer should be fitted to have vocabulary"
             )
 
-        for word in self.corpus_:
+        for word in self.vocab_:
             cnt: int = 0
             for sent in input:
                 sent_tokens: dtypes.List[str] = self.tk_().tokenize(sent)
@@ -147,17 +147,17 @@ class TfidfVectorizer(BaseVectorizer):
         """
 
         input_tokens: dtypes.List[str] = self.tk_().tokenize(input)
-        res_vec = [0] * len(self.corpus_)
+        res_vec = [0] * len(self.vocab_)
 
         for idx, tok in enumerate(input_tokens):
             # In case we can't process tokens like "end." and "end" at the end 
             # of string (sentence/context) like different tokens.
             tok = self._preprocess_tok(tok=tok, tokens=input_tokens, curr_idx=idx)
-            if tok in self.corpus_:
+            if tok in self.vocab_:
                 res_vec[self.indices_[tok]] += 1
 
         for tok in input_tokens:
-            if tok in self.corpus_:
+            if tok in self.vocab_:
                 res_vec[self.indices_[tok]] *= self.vidf_[tok]
 
         return res_vec

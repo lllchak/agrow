@@ -5,7 +5,7 @@ from vectorizers import (
 from tokenizers import PunctTokenizer
 
 CorpusInput = dtypes.Union[dtypes.List[str], str]
-VectorizedOutput = dtypes.List[dtypes.List[str]]
+VectorizedOutput = dtypes.List[dtypes.List[int]]
 
 
 class CountVectorizer(BaseVectorizer):
@@ -54,8 +54,6 @@ class CountVectorizer(BaseVectorizer):
             Vectorized corpus
         """
 
-        input = self._check_input(input)
-
         return [self.__trsent(sent) for sent in input]
 
     def fit_transform(
@@ -77,14 +75,6 @@ class CountVectorizer(BaseVectorizer):
             Vectorized corpus
         """
 
-        input = self._check_input(input)
-
-        self.fit(
-            input=input,
-            ignore_stopwords=ignore_stopwords,
-            tokenizer=tokenizer
-        )
-
         return self.transform(input)
 
     def __trsent(self, input: str) -> dtypes.List[int]:
@@ -100,13 +90,13 @@ class CountVectorizer(BaseVectorizer):
         """
 
         input_tokens: dtypes.List[str] = self.tk_().tokenize(input)
-        res_vec = [0] * len(self.corpus_)
+        res_vec = [0] * len(self.vocab_)
 
         for idx, tok in enumerate(input_tokens):
             # In case we can't process tokens like "end." and "end" at the end 
             # of string (sentence/context) like different tokens.
             tok = self._preprocess_tok(tok=tok, tokens=input_tokens, curr_idx=idx)
-            if tok in self.corpus_:
+            if tok in self.vocab_:
                 res_vec[self.indices_[tok]] += 1
 
         return res_vec

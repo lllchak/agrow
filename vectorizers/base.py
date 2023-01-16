@@ -7,6 +7,7 @@ from nltk.corpus import stopwords
 nltk.download("stopwords")
 
 import dtypes
+from tokenizers import PunctTokenizer
 from .utils import is_punct
 
 CorpusInput = dtypes.Union[dtypes.List[str], str]
@@ -25,7 +26,7 @@ class BaseVectorizer(ABC):
     """
     BaseVectorizer attributes:
         1. stopwords_  - List of provided corpus stopwords
-        2. corpus_     - List of corpus vocabulary (without punctuation).
+        2. vocab_     - List of corpus vocabulary (without punctuation).
                          In extracts from given documents at fit(...) stage.
         3. tk_         - Tokenizer used to divide string (sentence/context) 
                          by tokens
@@ -34,7 +35,7 @@ class BaseVectorizer(ABC):
                          dictionary (vocab. element index: its value).
     """
     stopwords_: dtypes.List[str] = []
-    corpus_: dtypes.Set[str] = set()
+    vocab_: dtypes.Set[str] = set()
     tk_: dtypes.Any = None
     indices_: dtypes.Dict[str, int] = {}
     invindices_: dtypes.Dict[int, str] = {}
@@ -42,7 +43,7 @@ class BaseVectorizer(ABC):
     def __repr__(self) -> str:
         return "{}(size={}, stopwords={})".format(
             self.__class__.__name__,
-            len(self.corpus_),
+            len(self.vocab_),
             self.stopwords_
         )
 
@@ -50,7 +51,8 @@ class BaseVectorizer(ABC):
     def fit(
         self,
         input: CorpusInput,
-        ignore_stopwords: bool = True
+        ignore_stopwords: bool = True,
+        tokenizer: dtypes.Any = PunctTokenizer
     ) -> None:
         """
         Abstract given corpus (could be one sentence or a list of sentences) 
@@ -90,7 +92,8 @@ class BaseVectorizer(ABC):
     def fit_transform(
         self, 
         input: CorpusInput, 
-        ignore_stopwords: bool = True
+        ignore_stopwords: bool = True,
+        tokenizer: dtypes.Any = PunctTokenizer
     ) -> VectorizedOutput:
         """
         Abstract given corpus (could be one sentence of a list of sentences)
@@ -145,14 +148,14 @@ class BaseVectorizer(ABC):
                 # of string (sentence/context) like different tokens.
                 tok = self._preprocess_tok(tok=tok, tokens=tokens, curr_idx=idx)
 
-                if not is_punct(tok) and tok not in self.corpus_:
-                    if tok not in lstopwords: self.corpus_.add(tok)
+                if not is_punct(tok) and tok not in self.vocab_:
+                    if tok not in lstopwords: self.vocab_.add(tok)
                     else:
-                        if ignore_stopwords: self.corpus_.add(tok) 
+                        if ignore_stopwords: self.vocab_.add(tok) 
                         self.stopwords_.append(tok)
 
-        self.indices_ = {word: idx for idx, word in enumerate(sorted(self.corpus_))}
-        self.invindices_ = {idx: word for idx, word in enumerate(sorted(self.corpus_))}
+        self.indices_ = {word: idx for idx, word in enumerate(sorted(self.vocab_))}
+        self.invindices_ = {idx: word for idx, word in enumerate(sorted(self.vocab_))}
 
     def _preprocess_tok(
         self,
