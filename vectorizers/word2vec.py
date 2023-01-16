@@ -40,7 +40,7 @@ class Word2Vec(BaseVectorizer):
             None (only creates corpus vocabulary)
         """
 
-        self._check_input(input)
+        input = self._check_input(input)
 
         self._cvocab(
             input=input,
