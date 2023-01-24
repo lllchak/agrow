@@ -4,11 +4,13 @@ from typing import (
     Set,
     Dict,
     Union,
+    Iterable,
     Any
 )
 
 
 __all__ = [
     "List", "Tuple", "Dict",
-    "Union", "Any", "Set"
+    "Union", "Any", "Set",
+    "Iterable"
 ]

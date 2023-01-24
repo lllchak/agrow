@@ -19,13 +19,13 @@ class Word2Vec(BaseVectorizer):
     __slots__ = [
         "train_"
     ]
-
+    
     def fit(
         self,
         input: CorpusInput,
         ignore_stopwords: bool = True,
         tokenizer: dtypes.Any = PunctTokenizer,
-        window_size: int = 3
+        window_size: int = 2
     ) -> None:
         """
         You can find more complete docs at ./base.py
@@ -71,7 +71,7 @@ class Word2Vec(BaseVectorizer):
         self,
         ignore_stopwords: bool = True,
         tokenizer: dtypes.Any = PunctTokenizer,
-        window_size: int = 3
+        window_size: int = 2
     ) -> dtypes.List[np.float64]:
         pass
 
@@ -79,18 +79,25 @@ class Word2Vec(BaseVectorizer):
     def __gtrain(self, wsize: int) -> None:
         X: dtypes.List[int] = []
         Y: dtypes.List[int] = []
+        vocab_size: int = len(self.vocab_)
+        vocab_list: dtypes.List[str] = list(self.vocab_)
 
-        for i in range(len(self.vocab_)):
-            nbr_inds = list(range(max(0, i - wsize), i)) + \
-                       list(range(i + 1, min(len(self.vocab_), wsize + 1)))
+        for i in range(vocab_size):
+            nbr_inds = (
+                list(range(max(0, i - wsize), i)) + \
+                list(range(i, min(vocab_size, i + wsize + 1)))
+            )
+            print(nbr_inds)
             for j in nbr_inds:
-                X.append(self.indices_[list(self.vocab_)[i]])
-                Y.append(self.indices_[list(self.vocab_)[j]])
+                if i == j: continue
+                print(j)
+                X.append(self.__onehot(self.indices_[vocab_list[i]], vocab_size))
+                Y.append(self.__onehot(self.indices_[vocab_list[j]], vocab_size))
 
-        X = np.array(X)
-        X = np.expand_dims(X, axis=0)
-        Y = np.array(Y)
-        Y = np.expand_dims(Y, axis=0)
+        self.train_ = (np.asarray(X), np.asarray(Y))
 
-        self.train_ = (X, Y)
-        
+    def __onehot(self, word_id: int, vocab_len: int) -> dtypes.List[int]:
+        ans: dtypes.List[int] = [0] * vocab_len
+        ans[word_id] = 1
+
+        return ans
