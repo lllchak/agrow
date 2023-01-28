@@ -20,10 +20,6 @@ class Word2Vec(BaseVectorizer):
         "train_", "embed_size_", "history_"
         "model_"
     ]
-
-    """
-    Initializes to model with random weights matrices
-    """
     
     def fit(
         self,
@@ -122,7 +118,7 @@ class Word2Vec(BaseVectorizer):
         assert dw1.shape == self.model_["w1"].shape, "Weigth matrices dimensions are not equal"
 
         self.model_["w1"] -= learning_rate * dw1
-        self.model_["w2"] -= learning_rate * dw2
+        self.model_["w2"] -= learning_rate * dw2    
 
         return self.__cross_entropy(cache["ans"], self.train_[1])
 
@@ -152,6 +148,7 @@ class Word2Vec(BaseVectorizer):
                 list(range(i, min(vocab_size, i + wsize + 1)))
             )
             for j in nbr_inds:
+                print([vocab_list[i]] + vocab_list[max(0, i - wsize): min(vocab_size, i + wsize + 1)])
                 if i == j: continue
                 X.append(self.__onehot(self.indices_[vocab_list[i]], vocab_size))
                 Y.append(self.__onehot(self.indices_[vocab_list[j]], vocab_size))
