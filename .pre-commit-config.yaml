@@ -4,7 +4,7 @@ repos:
     hooks:
     -   id: black
         args: [--safe]
-        files: tokenizers/src/*.py tokenizers/*.py tokenizers/tests/*.py vectorizers/src/*.py  vectorizers/*.py vectorizers/tests/*.py
+        files: /^[^\/]+\/?(?:[^\/]+\/?)*$/gm
 
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v3.2.0
