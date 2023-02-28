@@ -11,7 +11,7 @@ So there is no need in special hardware to reproduce any results.
 if needed.
 
 ### Setting up new virtual environment
-Despite you can use pre-installed virtual environments, it is also available to create new environment and install dependencies to it using `./Makefile`. To create new virtual environment run
+It is available to create new environment and install dependencies to it using `./Makefile`. To create new virtual environment run
 ```bash
 make cenv ename=<NEW_ENV_NAME>
 ```
