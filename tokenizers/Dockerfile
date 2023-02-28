@@ -9,7 +9,6 @@ LABEL "author"="lllchak"
 RUN apk add --no-cache --virtual .build-deps \
     build-base openssl-dev libffi-dev
 
-COPY tokenizers_requirements.txt .
 RUN pip install --upgrade pip
 RUN pip install -r tokenizers_requirements.txt
 
