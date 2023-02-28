@@ -13,16 +13,27 @@ pname ?= ""
 tname ?= ""
 
 # Rule to run creating virtual environment commands. It checks
-# if environment already installed and if it's not, 'cenv' rule
+# if environment is already installed and if it's not, 'cenv' rule
 # installs one.
 cenv:
 ifeq ("$(wildcard venvs/$(ename))", "")
-	@echo "$(MAKE): Installing new virtual environment..."
+	@echo "$(MAKE): Installing virtual environment '$(ename)'..."
 	@($(BASE_INTERPRETER) -m venv venvs/$(ename))
-	@echo "$(MAKE): Virtual environment successfully installed"
+	@echo "$(MAKE): Virtual environment '$(ename)' successfully installed"
 else
-	@echo "$(MAKE): Virtual environment already satisfied [./venvs/$(ename)]"
+	@echo "$(MAKE): Virtual environment already installed [./venvs/$(ename)]"
 endif
+
+# Rule to run virtual environment removing. If checks if environment
+# exists and removes it, otherwise do nothing
+renv:
+ifeq ("$(wildcard venvs/$(ename))", "")
+	@echo "$(MAKE): Virtual environment '$(ename)' does not exist"
+else
+	@echo "$(MAKE): Removing virtual environment '$(ename)'..."
+	@(rm -rf "venvs/$(ename)")
+	@echo "$(MAKE): Virtual environment '$(ename)' successfully removed"
+endif 
 
 # Rule to run requirements installation command. It takes requirements
 # from provided requirements file (all stored in ./requirements directory).
