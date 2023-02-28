@@ -7,9 +7,6 @@ All of projects were built using:
 
 So there is no need in special hardware to reproduce any results.
 
-**Note**: You can find pre-built virtual environments in `./venvs` folder 
-if needed.
-
 ### Setting up new virtual environment
 It is available to create new environment and install dependencies to it using `./Makefile`. To create new virtual environment run
 ```bash
