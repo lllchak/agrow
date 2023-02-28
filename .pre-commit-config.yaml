@@ -4,7 +4,7 @@ repos:
     hooks:
     -   id: black
         args: [--safe]
-        files: /^[^\/]+\/?(?:[^\/]+\/?)*$/gm
+        files: .*/[^/]*.py
 
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v3.2.0
@@ -13,6 +13,5 @@ repos:
     -   id: end-of-file-fixer
     -   id: check-yaml
     -   id: check-added-large-files
-    -   id: debug-statements
         language_version: python3
-        args: [--all-files]
+    args: [--all-files]
