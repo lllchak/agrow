@@ -12,6 +12,7 @@ It is available to create new environment and install dependencies to it using `
 ```bash
 make cenv ename=<NEW_ENV_NAME>
 ```
+
 **Note**: make sure you activated created environment right after you installed it (`source venvs/<NEW_ENV_NAME>/bin/activate`). It would help you to avoid global dependency installing problem.
 
 After environment is installed (installs in `./venvs` folder by default. Intalling to provided directory is yet to come) you can add dependecies from provided requirements file to it running
