@@ -1,5 +1,10 @@
 # NLP Playground
-### Environment
+# Table of content
+- [Environment](#environment)
+- [For developers](#for-developers)
+    * [Running tests](#running-tests)
+    * [Subproject structure](#subprojects-structure)
+## Environment
 All of projects were built using:
 - Python 3.10.6 (pip 22.3.1)
 - WSL Ubuntu 20.04
@@ -7,6 +12,7 @@ All of projects were built using:
 
 So there is no need in special hardware to reproduce any results.
 
+## For developers
 ### Setting up and removing virtual environment
 It is available to create new environment and install dependencies to it using `./Makefile`. To create new virtual environment run
 ```bash
@@ -28,6 +34,10 @@ make idep pname=<PACKAGE_NAME>
 To remove existing virtual environment run
 ```bash
 make renv ename=<ENV_NAME>
+```
+
+### Running tests
+```
 ```
 
 ### Subprojects structure
