@@ -14,11 +14,6 @@ make cenv ename=<NEW_ENV_NAME>
 ```
 **Note**: make sure you activated created environment right after you installed it (`source venvs/<NEW_ENV_NAME>/bin/activate`). It would help you to avoid global dependency installing problem.
 
-To remove existing virtual environment run
-```bash
-make renv ename=<ENV_NAME>
-```
-
 After environment is installed (installs in `./venvs` folder by default. Intalling to provided directory is yet to come) you can add dependecies from provided requirements file to it running
 ```bash
 make idep rname=<REQUIREMENTS_NAME> (from ./requirements)
@@ -27,6 +22,11 @@ make idep rname=<REQUIREMENTS_NAME> (from ./requirements)
 Or install exact dependency(-ies) running
 ```bash
 make idep pname=<PACKAGE_NAME>
+```
+
+To remove existing virtual environment run
+```bash
+make renv ename=<ENV_NAME>
 ```
 
 ### Subprojects structure
