@@ -3,7 +3,8 @@ repos:
     rev: 21.9b0
     hooks:
     -   id: black
-        args: [--safe --all-files]
+        args: [--safe]
+        files: tokenizers/src/*.py tokenizers/*.py tokenizers/tests/*.py vectorizers/src/*.py  vectorizers/*.py vectorizers/tests/*.py
 
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v3.2.0
