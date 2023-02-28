@@ -7,12 +7,17 @@ All of projects were built using:
 
 So there is no need in special hardware to reproduce any results.
 
-### Setting up new virtual environment
+### Setting up and removing virtual environment
 It is available to create new environment and install dependencies to it using `./Makefile`. To create new virtual environment run
 ```bash
 make cenv ename=<NEW_ENV_NAME>
 ```
 **Note**: make sure you activated created environment right after you installed it (`source venvs/<NEW_ENV_NAME>/bin/activate`). It would help you to avoid global dependency installing problem.
+
+To remove existing virtual environment run
+```bash
+make renv ename=<ENV_NAME>
+```
 
 After environment is installed (installs in `./venvs` folder by default. Intalling to provided directory is yet to come) you can add dependecies from provided requirements file to it running
 ```bash
