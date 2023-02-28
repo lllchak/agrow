@@ -1,9 +1,9 @@
 import dtypes
 
-from .base import BaseVectorizer
-from .count import CountVectorizer
-from .tfidf import TfidfVectorizer
-from .word2vec import Word2Vec
+from .src.base import BaseVectorizer
+from .src.count import CountVectorizer
+from .src.tfidf import TfidfVectorizer
+from .src.word2vec import Word2Vec
 
 
 __all__ = [
