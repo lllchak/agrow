@@ -1,12 +1,12 @@
 version: '3'
 
 services:
-  tokenizers:
-    build:
-      context: ./tokenizers
-      target: tokenizers
+    tokenizers:
+        build:
+            context: ./tokenizers
+            target: tokenizers
 
-  vectorizers:
-    build:
-      context: ./vectorizers
-      target: vectorizers
+    vectorizers:
+        build:
+            context: ./vectorizers
+            target: vectorizers

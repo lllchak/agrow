@@ -43,7 +43,7 @@ idep:
 ifeq ($(rname), "")
 	@pip install $(pname)
 else
-	@pip install -r requirements/$(rname)_requirements.txt
+	@pip install -r $(rname)
 endif
 
 # Rule to run requirements uninstallation command. It removes requirements
@@ -54,7 +54,7 @@ udep:
 ifeq ($(rname), "")
 	@pip uninstall $(pname) -y
 else
-	@pip uninstall -r requirements/$(rname)_requirements.txt -y
+	@pip uninstall -r $(rname) -y
 endif
 
 # Rule for upgrading given package
