@@ -1,9 +1,7 @@
-from abc import (
-    ABC,
-    abstractmethod
-)
+from abc import ABC, abstractmethod
 import nltk
 from nltk.corpus import stopwords
+
 nltk.download("stopwords")
 
 import dtypes
@@ -16,9 +14,9 @@ VectorizedOutput = dtypes.List[dtypes.List[str]]
 
 class BaseVectorizer(ABC):
     """
-    Vectorizer base class. It defines abstract methods for performing 
-    vectorization. 
-    
+    Vectorizer base class. It defines abstract methods for performing
+    vectorization.
+
     Note: fit(...), tranform(...) and fit_transform(...) methods
           should be overwritten to perform text vectorization.
     """
@@ -28,10 +26,10 @@ class BaseVectorizer(ABC):
         1. stopwords_  - List of provided corpus stopwords
         2. vocab_     - List of corpus vocabulary (without punctuation).
                          In extracts from given documents at fit(...) stage.
-        3. tk_         - Tokenizer used to divide string (sentence/context) 
+        3. tk_         - Tokenizer used to divide string (sentence/context)
                          by tokens
         4. indices_    - (Vocabulary element: its index) mapping dictionary
-        5. invindices_ - Inversed (vocabulary element: its index) mapping 
+        5. invindices_ - Inversed (vocabulary element: its index) mapping
                          dictionary (vocab. element index: its value).
     """
     stopwords_: dtypes.List[str] = []
@@ -42,9 +40,7 @@ class BaseVectorizer(ABC):
 
     def __repr__(self) -> str:
         return "{}(size={}, stopwords={})".format(
-            self.__class__.__name__,
-            len(self.vocab_),
-            self.stopwords_
+            self.__class__.__name__, len(self.vocab_), self.stopwords_
         )
 
     @abstractmethod
@@ -52,15 +48,15 @@ class BaseVectorizer(ABC):
         self,
         input: CorpusInput,
         ignore_stopwords: bool = True,
-        tokenizer: dtypes.Any = PunctTokenizer
+        tokenizer: dtypes.Any = PunctTokenizer,
     ) -> None:
         """
-        Abstract given corpus (could be one sentence or a list of sentences) 
+        Abstract given corpus (could be one sentence or a list of sentences)
         fitting corpus method. As an advice - could call some helper which
         vectorize only one sentence.
 
         Args:
-            input (CorpusInput)     : Corpus to fit with. Could be one sentence or 
+            input (CorpusInput)     : Corpus to fit with. Could be one sentence or
                                       a list of sentences
             ignore_stopwords (bool) : If ignore corpus stopwords or not flag
 
@@ -79,7 +75,7 @@ class BaseVectorizer(ABC):
         approaches (Count, TF-IDF, etc.).
 
         Args:
-            input (CorpusInput) : Corpus to be vectorized. Could be one sentence or 
+            input (CorpusInput) : Corpus to be vectorized. Could be one sentence or
                                   a list of sentences
 
         Returns:
@@ -90,15 +86,15 @@ class BaseVectorizer(ABC):
 
     @abstractmethod
     def fit_transform(
-        self, 
-        input: CorpusInput, 
+        self,
+        input: CorpusInput,
         ignore_stopwords: bool = True,
-        tokenizer: dtypes.Any = PunctTokenizer
+        tokenizer: dtypes.Any = PunctTokenizer,
     ) -> VectorizedOutput:
         """
         Abstract given corpus (could be one sentence of a list of sentences)
         fitting and tranforming method. According to the idea, simply - a wrapper
-        above fit(...) and tranform(...) methods, tranforms given corpus after 
+        above fit(...) and tranform(...) methods, tranforms given corpus after
         fitting vectorizer on a it (corpus).
 
         Args:
@@ -115,15 +111,13 @@ class BaseVectorizer(ABC):
     """
     Given language stopwords
     """
+
     @property
     def lang_stopwords_(self, language: str = "english") -> dtypes.List[str]:
         return stopwords.words(language)
 
     def _cvocab(
-        self, 
-        input: CorpusInput, 
-        ignore_stopwords: bool,
-        tokenizer: dtypes.Any
+        self, input: CorpusInput, ignore_stopwords: bool, tokenizer: dtypes.Any
     ) -> None:
         """
         Creating corpus vocabulary (fitting wrapper) method. Creates corpus vocabulary
@@ -144,25 +138,22 @@ class BaseVectorizer(ABC):
         for sent in input:
             tokens: dtypes.List[str] = self.tk_().tokenize(sent)
             for idx, tok in enumerate(tokens):
-                # In case we can't process tokens like "end." and "end" at the end 
+                # In case we can't process tokens like "end." and "end" at the end
                 # of string (sentence/context) like different tokens.
                 tok = self._preprocess_tok(tok=tok, tokens=tokens, curr_idx=idx)
 
                 if not is_punct(tok) and tok not in self.vocab_:
-                    if tok not in lstopwords: self.vocab_.add(tok)
+                    if tok not in lstopwords:
+                        self.vocab_.add(tok)
                     else:
-                        if ignore_stopwords: self.vocab_.add(tok) 
+                        if ignore_stopwords:
+                            self.vocab_.add(tok)
                         self.stopwords_.append(tok)
 
         self.indices_ = {word: idx for idx, word in enumerate(sorted(self.vocab_))}
         self.invindices_ = {idx: word for idx, word in enumerate(sorted(self.vocab_))}
 
-    def _preprocess_tok(
-        self,
-        tok: str,
-        tokens: dtypes.List[str],
-        curr_idx: int
-    ) -> str:
+    def _preprocess_tok(self, tok: str, tokens: dtypes.List[str], curr_idx: int) -> str:
         """
         Preprocessing separate token method.
 
@@ -176,7 +167,8 @@ class BaseVectorizer(ABC):
         """
 
         tok = tok.lower()
-        if tok[-1] == '.' and curr_idx == len(tokens) - 1: tok = tok[:-1]
+        if tok[-1] == "." and curr_idx == len(tokens) - 1:
+            tok = tok[:-1]
 
         return tok
 
@@ -188,13 +180,12 @@ class BaseVectorizer(ABC):
             input (CorpusInput) : Corpus to be checked
 
         Returns:
-            None (raises error if corpus is invalid) or corpus in appropriate view 
+            None (raises error if corpus is invalid) or corpus in appropriate view
         """
 
-        if isinstance(input, str): input = [input]
+        if isinstance(input, str):
+            input = [input]
         if not all(isinstance(sent, str) for sent in input):
-            raise TypeError(
-                "Input corpus should be a list of strings or a string."
-            )
+            raise TypeError("Input corpus should be a list of strings or a string.")
 
         return input

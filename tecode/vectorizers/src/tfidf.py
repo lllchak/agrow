@@ -1,10 +1,7 @@
 from math import log
 
 from tokenizers import PunctTokenizer
-from vectorizers import (
-    BaseVectorizer,
-    dtypes
-)
+from vectorizers import BaseVectorizer, dtypes
 
 CorpusInput = dtypes.Union[dtypes.List[str], str]
 VectorizedOutput = dtypes.List[dtypes.List[str]]
@@ -19,15 +16,13 @@ class TfidfVectorizer(BaseVectorizer):
     """
     TfidfVectorizer custom attributes
     """
-    __slots__ = [
-        "vidf_"
-    ]
+    __slots__ = ["vidf_"]
 
     def fit(
         self,
         input: CorpusInput,
         ignore_stopwords: bool = True,
-        tokenizer: dtypes.Any = PunctTokenizer
+        tokenizer: dtypes.Any = PunctTokenizer,
     ) -> None:
         """
         You can find more complete docs at ./base.py
@@ -45,9 +40,7 @@ class TfidfVectorizer(BaseVectorizer):
         self._check_input(input)
 
         self._cvocab(
-            input=input,
-            ignore_stopwords=ignore_stopwords,
-            tokenizer=tokenizer
+            input=input, ignore_stopwords=ignore_stopwords, tokenizer=tokenizer
         )
 
         self.__idf(input=input)
@@ -73,7 +66,7 @@ class TfidfVectorizer(BaseVectorizer):
         self,
         input: CorpusInput,
         ignore_stopwords: bool = True,
-        tokenizer: dtypes.Any = PunctTokenizer
+        tokenizer: dtypes.Any = PunctTokenizer,
     ) -> VectorizedOutput:
         """
         You can find more complete docs at ./base.py
@@ -90,11 +83,7 @@ class TfidfVectorizer(BaseVectorizer):
 
         input = self._check_input(input)
 
-        self.fit(
-            input=input,
-            ignore_stopwords=ignore_stopwords,
-            tokenizer=tokenizer
-        )
+        self.fit(input=input, ignore_stopwords=ignore_stopwords, tokenizer=tokenizer)
 
         return self.transform(input)
 
@@ -116,10 +105,8 @@ class TfidfVectorizer(BaseVectorizer):
 
         self.vidf_: dtypes.Dict[str, float] = {}
 
-        if not self.vocab_: 
-            raise AttributeError(
-                "Vectorizer should be fitted to have vocabulary"
-            )
+        if not self.vocab_:
+            raise AttributeError("Vectorizer should be fitted to have vocabulary")
 
         for word in self.vocab_:
             cnt: int = 0
@@ -127,9 +114,7 @@ class TfidfVectorizer(BaseVectorizer):
                 sent_tokens: dtypes.List[str] = self.tk_().tokenize(sent)
                 for idx, tok in enumerate(set(sent_tokens)):
                     tok = self._preprocess_tok(
-                        tok=tok,
-                        tokens=sent_tokens,
-                        curr_idx=idx
+                        tok=tok, tokens=sent_tokens, curr_idx=idx
                     )
                     cnt += word == tok
             self.vidf_[word] = 1 + log((1 + len(input)) / (1 + cnt))
@@ -150,7 +135,7 @@ class TfidfVectorizer(BaseVectorizer):
         res_vec = [0] * len(self.vocab_)
 
         for idx, tok in enumerate(input_tokens):
-            # In case we can't process tokens like "end." and "end" at the end 
+            # In case we can't process tokens like "end." and "end" at the end
             # of string (sentence/context) like different tokens.
             tok = self._preprocess_tok(tok=tok, tokens=input_tokens, curr_idx=idx)
             if tok in self.vocab_:

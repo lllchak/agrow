@@ -12,15 +12,12 @@ CorpusInput = dtypes.Union[dtypes.List[str], str]
 class Word2Vec(BaseVectorizer):
     """
     Word2Vec embedder. Transforms word into float vector representation.
-    Allows to process words like numbers, calculate the "distance" 
+    Allows to process words like numbers, calculate the "distance"
     between words, preserving the semantics of the language.
     """
 
-    __slots__ = [
-        "train_", "embed_size_", "history_"
-        "model_"
-    ]
-    
+    __slots__ = ["train_", "embed_size_", "history_" "model_"]
+
     def fit(
         self,
         input: CorpusInput,
@@ -29,7 +26,7 @@ class Word2Vec(BaseVectorizer):
         n_iter: int = 50,
         learning_rate: float = 1e-4,
         embedding_size: int = 10,
-        window_size: int = 2
+        window_size: int = 2,
     ) -> None:
         """
         You can find more complete docs at ./base.py
@@ -48,9 +45,7 @@ class Word2Vec(BaseVectorizer):
         self.embed_size_ = embedding_size
 
         self._cvocab(
-            input=input,
-            ignore_stopwords=ignore_stopwords,
-            tokenizer=tokenizer
+            input=input, ignore_stopwords=ignore_stopwords, tokenizer=tokenizer
         )
 
         self.__gtrain(wsize=window_size)
@@ -84,12 +79,14 @@ class Word2Vec(BaseVectorizer):
         n_iter: int = 50,
         learning_rate: float = 1e-4,
         embedding_size: int = 10,
-        window_size: int = 2
+        window_size: int = 2,
     ) -> dtypes.List[np.float64]:
         pass
 
     def sample(self, instance) -> dtypes.List[str]:
-        assert instance in self.indices_, f"Word '{instance}' is not in vocabulary, add it to your corpus first"
+        assert (
+            instance in self.indices_
+        ), f"Word '{instance}' is not in vocabulary, add it to your corpus first"
         oh_instance = self.__onehot(self.indices_[instance], len(self.vocab_))
         return self.__forward([oh_instance], self.model_, return_cache=False)[0]
 
@@ -98,11 +95,12 @@ class Word2Vec(BaseVectorizer):
 
         return {
             "w1": np.random.randn(vocab_size, self.embed_size_),
-            "w2": np.random.randn(self.embed_size_, vocab_size)
+            "w2": np.random.randn(self.embed_size_, vocab_size),
         }
 
-    def __backward(self, 
-        learning_rate: float = 1e-4, 
+    def __backward(
+        self,
+        learning_rate: float = 1e-4,
     ) -> np.float64:
         cache: dtypes.Dict[str, np.ndarray] = self.__forward(
             X=self.train_[0], model=self.model_
@@ -114,11 +112,15 @@ class Word2Vec(BaseVectorizer):
         da1: np.ndarray = da2 @ self.model_["w2"].T
         dw1: np.ndarray = self.train_[0].T @ da1
 
-        assert dw2.shape == self.model_["w2"].shape, "Weigth matrices dimensions are not equal"
-        assert dw1.shape == self.model_["w1"].shape, "Weigth matrices dimensions are not equal"
+        assert (
+            dw2.shape == self.model_["w2"].shape
+        ), "Weigth matrices dimensions are not equal"
+        assert (
+            dw1.shape == self.model_["w1"].shape
+        ), "Weigth matrices dimensions are not equal"
 
         self.model_["w1"] -= learning_rate * dw1
-        self.model_["w2"] -= learning_rate * dw2    
+        self.model_["w2"] -= learning_rate * dw2
 
         return self.__cross_entropy(cache["ans"], self.train_[1])
 
@@ -126,7 +128,7 @@ class Word2Vec(BaseVectorizer):
         self,
         X: np.ndarray,
         model: dtypes.Dict[str, np.ndarray],
-        return_cache: bool = True
+        return_cache: bool = True,
     ) -> dtypes.Union[dtypes.Dict[str, np.ndarray], np.ndarray]:
         cache: dtypes.Dict[str, np.ndarray] = {"t1": None, "t2": None, "prob": None}
 
@@ -143,13 +145,16 @@ class Word2Vec(BaseVectorizer):
         vocab_list: dtypes.List[str] = list(self.vocab_)
 
         for i in range(vocab_size):
-            nbr_inds = (
-                list(range(max(0, i - wsize), i)) + \
-                list(range(i, min(vocab_size, i + wsize + 1)))
+            nbr_inds = list(range(max(0, i - wsize), i)) + list(
+                range(i, min(vocab_size, i + wsize + 1))
             )
             for j in nbr_inds:
-                print([vocab_list[i]] + vocab_list[max(0, i - wsize): min(vocab_size, i + wsize + 1)])
-                if i == j: continue
+                print(
+                    [vocab_list[i]]
+                    + vocab_list[max(0, i - wsize) : min(vocab_size, i + wsize + 1)]
+                )
+                if i == j:
+                    continue
                 X.append(self.__onehot(self.indices_[vocab_list[i]], vocab_size))
                 Y.append(self.__onehot(self.indices_[vocab_list[j]], vocab_size))
 
@@ -157,7 +162,7 @@ class Word2Vec(BaseVectorizer):
 
     def __softmax(self, X: np.ndarray) -> np.ndarray:
         ans: dtypes.List = []
-        
+
         for vec in X:
             exp: np.array = np.exp(vec)
             ans.append(exp / exp.sum())

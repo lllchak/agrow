@@ -1,7 +1,4 @@
-from vectorizers import (
-    BaseVectorizer,
-    dtypes
-)
+from vectorizers import BaseVectorizer, dtypes
 from tokenizers import PunctTokenizer
 
 CorpusInput = dtypes.Union[dtypes.List[str], str]
@@ -10,7 +7,7 @@ VectorizedOutput = dtypes.List[dtypes.List[int]]
 
 class CountVectorizer(BaseVectorizer):
     """
-    Count vectorizer based on Bag-of-Words (BoW) approach class. 
+    Count vectorizer based on Bag-of-Words (BoW) approach class.
     Transforms input corpus into vector(-s) of token occurances.
     """
 
@@ -18,7 +15,7 @@ class CountVectorizer(BaseVectorizer):
         self,
         input: CorpusInput,
         ignore_stopwords: bool = True,
-        tokenizer: dtypes.Any = PunctTokenizer
+        tokenizer: dtypes.Any = PunctTokenizer,
     ) -> None:
         """
         You can find more complete docs at ./base.py
@@ -36,9 +33,7 @@ class CountVectorizer(BaseVectorizer):
         input = self._check_input(input)
 
         self._cvocab(
-            input=input, 
-            ignore_stopwords=ignore_stopwords,
-            tokenizer=tokenizer
+            input=input, ignore_stopwords=ignore_stopwords, tokenizer=tokenizer
         )
 
     def transform(self, input: CorpusInput) -> VectorizedOutput:
@@ -60,7 +55,7 @@ class CountVectorizer(BaseVectorizer):
         self,
         input: CorpusInput,
         ignore_stopwords: bool = True,
-        tokenizer: dtypes.Any = PunctTokenizer
+        tokenizer: dtypes.Any = PunctTokenizer,
     ) -> VectorizedOutput:
         """
         You can find more complete docs at ./base.py
@@ -93,11 +88,10 @@ class CountVectorizer(BaseVectorizer):
         res_vec = [0] * len(self.vocab_)
 
         for idx, tok in enumerate(input_tokens):
-            # In case we can't process tokens like "end." and "end" at the end 
+            # In case we can't process tokens like "end." and "end" at the end
             # of string (sentence/context) like different tokens.
             tok = self._preprocess_tok(tok=tok, tokens=input_tokens, curr_idx=idx)
             if tok in self.vocab_:
                 res_vec[self.indices_[tok]] += 1
 
         return res_vec
-        

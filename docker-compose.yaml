@@ -3,10 +3,10 @@ version: '3'
 services:
     tokenizers:
         build:
-            context: ./tokenizers
+            context: ./tecode/tokenizers
             target: tokenizers
 
     vectorizers:
         build:
-            context: ./vectorizers
+            context: ./tecode/vectorizers
             target: vectorizers
