@@ -3,7 +3,7 @@
 - [Environment](#environment)
 - [For developers](#for-developers)
     * [Running tests](#running-tests)
-    * [Subproject structure](#subprojects-structure)
+- [Subprojects structure](#subprojects-structure)
 ## Environment
 All of projects were built using:
 - Python 3.10.6 (pip 22.3.1)
@@ -41,7 +41,7 @@ make renv ename=<ENV_NAME>
 ```
 
 ### Subprojects structure
-That repository contains some educational NLP small projects. Here is 
+That repository contains some educational NLP small projects. Here is
 the list of projects have been implemented at the moment:
 - [Tokenizers](./tokenizers)
 
