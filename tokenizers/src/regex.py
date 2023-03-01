@@ -1,9 +1,7 @@
 import re
+from typing import List
 
-from tokenizers import (
-    BaseTokenizer,
-    dtypes
-)
+from .base import BaseTokenizer
 
 
 class RegexTokenizer(BaseTokenizer):
@@ -15,10 +13,10 @@ class RegexTokenizer(BaseTokenizer):
 
     def __init__(
         self,
-        pattern: str = r'.',
+        pattern: str = r".",
         find_gaps: bool = False,
         remove_empty: bool = True,
-        rflags: re.RegexFlag = re.UNICODE | re.MULTILINE | re.DOTALL
+        rflags: re.RegexFlag = re.UNICODE | re.MULTILINE | re.DOTALL,
     ) -> None:
         """
         Initializes RegexTokenizer object with given parameters. Also
@@ -58,10 +56,10 @@ class RegexTokenizer(BaseTokenizer):
             self.pattern,
             self.find_gaps,
             self.remove_empty,
-            self.rflags
+            self.rflags,
         )
 
-    def tokenize(self, string: str) -> dtypes.List[str]:
+    def tokenize(self, string: str) -> List[str]:
         """
         RegexTokenizer tokenization method implementation. Simply splits
         string (sentence/context) with the respect to given regex.
@@ -71,10 +69,12 @@ class RegexTokenizer(BaseTokenizer):
 
         Returns:
             List of tokens, i.e "string to tokenize" -> ["string", "to", "tokenize"]
-                                                            (rstring == r"\s+")
         """
 
         if self.find_gaps:
-            if self.remove_empty: return [tk for tk in self.regex.split(string) if tk]
-            else: return self.regex.split(string)
-        else: return self.regex.findall(string)
+            if self.remove_empty:
+                return [tk for tk in self.regex.split(string) if tk]
+            else:
+                return self.regex.split(string)
+        else:
+            return self.regex.findall(string)

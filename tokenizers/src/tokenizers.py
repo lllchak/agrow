@@ -1,22 +1,20 @@
 import re
+from typing import List
 
-from tokenizers import (
-    BaseTokenizer,
-    RegexTokenizer,
-    dtypes
-)
+from .base import BaseTokenizer
+from .regex import RegexTokenizer
 
 
 class WhitespaceTokenizer(RegexTokenizer):
     """
     Tokenize a string on a whitespace (space, tab, newline)
     In general, can be replaced by using string.split() built-in method.
-    It inherits from RegexTokenizer (inherits all methods).   
+    It inherits from RegexTokenizer (inherits all methods).
     """
 
     def __init__(self) -> None:
         """
-        Initializes WhitespaceTokenizer object with whitespace search 
+        Initializes WhitespaceTokenizer object with whitespace search
         pattern for RegexTokenizer. Also inherit all methods from parent class.
 
         Makes ["string", "to", "tokenize"] from "string\tto\n tokenize".
@@ -26,15 +24,15 @@ class WhitespaceTokenizer(RegexTokenizer):
 
 
 class NaivePunctTokenizer(RegexTokenizer):
-    """
+    r"""
     Tokenize string processing all punctuation characters like
     separate token. Using r"\w+|[^\w\s]+" regular expressing.
     It inherits from RegexTokenizer (inherits all methods).
     """
 
     def __init__(self) -> None:
-        """
-        Itializes NaivePunctTokenizer object with search using 
+        r"""
+        Itializes NaivePunctTokenizer object with search using
         r"\w+|[^\w\s]+" regular expression.
 
         Makes ["doughnut", "cost", "$", "10", ".", "48"]
@@ -52,8 +50,7 @@ class PunctTokenizer(BaseTokenizer):
 
     def __repr__(self) -> str:
         return "{}(string_tokenizer_regex={})".format(
-            __class__.__name__,
-            self._RE_STRING_TOKENIZER
+            __class__.__name__, self._RE_STRING_TOKENIZER
         )
 
     __slots__ = ["_RE_STRING_TOKENIZER"]
@@ -75,15 +72,16 @@ class PunctTokenizer(BaseTokenizer):
     )"""
 
     # Ending context chars
-    cend = ('.', '!', '?', ';', ':')
+    cend = (".", "!", "?", ";", ":")
 
     """
     Characters that cannot appear without words
     """
+
     @property
     def _re_non_word_chars(self):
         return r"(?:[)\";}\]\*:@\'\({\[%s])" % re.escape(
-            "".join(set(self.cend) - {'.'})
+            "".join(set(self.cend) - {"."})
         )
 
     """
@@ -99,23 +97,25 @@ class PunctTokenizer(BaseTokenizer):
     """
     Compiles word search regular experession
     """
+
     @property
     def gstring_re(self) -> str:
         self._RE_STRING_TOKENIZER = re.compile(
             self._STRING_TOKENIZER_FMT
             % {
-                "NonWord":   self._re_non_word_chars,
+                "NonWord": self._re_non_word_chars,
                 "WordStart": self._re_word_start,
-                "MultiChar": self._re_multi_char_punct
-            }, re.UNICODE | re.VERBOSE
+                "MultiChar": self._re_multi_char_punct,
+            },
+            re.UNICODE | re.VERBOSE,
         )
 
         return self._RE_STRING_TOKENIZER
 
-    def tokenize(self, string: str) -> dtypes.List[str]:
+    def tokenize(self, string: str) -> List[str]:
         """
-        Tokenizes a string (sentence/context) to a list of tokens 
-        using pre-compiled regular expression. Splits of punctuation 
+        Tokenizes a string (sentence/context) to a list of tokens
+        using pre-compiled regular expression. Splits of punctuation
         from words.
 
         Args:

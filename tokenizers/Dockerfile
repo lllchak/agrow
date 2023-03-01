@@ -1,4 +1,4 @@
-FROM python:3-alpine3.6 as tokenizers   
+FROM python:3-alpine3.6 as tokenizers
 
 WORKDIR /project
 COPY . .
@@ -13,4 +13,4 @@ RUN pip install --upgrade pip
 RUN pip install -r tokenizers_requirements.txt
 
 ENTRYPOINT [ "python" ]
-CMD [ "tests/tokenizers_tests.py" ]
+CMD [ "tokenizers_tests.py" ]
