@@ -10,7 +10,7 @@ RUN apk add --no-cache --virtual .build-deps \
     build-base openssl-dev libffi-dev
 
 RUN pip install --upgrade pip
-RUN pip install -r tokenizers_requirements.txt
+RUN pip install -r requirements.txt
 
 ENTRYPOINT [ "python" ]
 CMD [ "tecode/tokenizers/tokenizers_tests.py" ]
@@ -27,7 +27,7 @@ RUN apk add --no-cache --virtual .build-deps \
     build-base openssl-dev libffi-dev
 
 RUN pip install --upgrade pip
-RUN pip install -r vectorizers_requirements.txt
+RUN pip install -r requirements.txt
 
 ENTRYPOINT [ "python" ]
-CMD [ "tecode/tokenizers/vectorizers_tests.py" ]
+CMD [ "tecode/vectorizers/vectorizers_tests.py" ]
