@@ -44,8 +44,17 @@ class TestWhitespace(unittest.TestCase):
     def test_with_punct(self):
         self.__run_test("Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
 
+    def test_empty_head(self):
+        self.__run_test("       Lorem ipsum")
+
     def test_empty_tail(self):
         self.__run_test("Lorem ipsum        ")
+
+    def test_single_letters(self):
+        self.__run_test("L O R E M")
+
+    def test_long_empty(self):
+        self.__run_test("                  ")
 
 
 if __name__ == "__main__":
