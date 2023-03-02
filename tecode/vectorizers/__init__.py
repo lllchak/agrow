@@ -1,5 +1,3 @@
-import dtypes
-
 from .src.base import BaseVectorizer
 from .src.count import CountVectorizer
 from .src.tfidf import TfidfVectorizer
