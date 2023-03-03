@@ -46,6 +46,5 @@ RUN apk add --no-cache --virtual .build-deps \
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-COPY . /.scripts/test_all.sh
-RUN chmod a+x test_all.sh
-CMD [ "./test_all.sh" ]
+ENTRYPOINT [ "sh" ]
+CMD [ ".scripts/test_all.sh" ]

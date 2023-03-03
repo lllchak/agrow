@@ -1,4 +1,7 @@
 #!/bin/bash
 
-exec python ../tecode/tokenizers/tokenizers_tests.py &
-exec python ../tecode/vectorizers/vectorizers_tests.py
+echo Tokenizers tests
+python tecode/tokenizers/tokenizers_tests.py
+
+echo Vectorizers tests
+python tecode/vectorizers/vectorizers_tests.py

@@ -3,7 +3,7 @@ import unittest
 
 class TestVectorizers(unittest.TestCase):
     def test_test(self):
-        print("Vectorizers tests")
+        pass
 
 
 if __name__ == "__main__":
