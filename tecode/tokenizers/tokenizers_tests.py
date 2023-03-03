@@ -4,7 +4,28 @@ from typing import Callable, List
 
 from src.tokenizers import WhitespaceTokenizer, NaivePunctTokenizer, PunctTokenizer
 
-from nltk.tokenize import WhitespaceTokenizer as nltk_whitespace_tokenizer
+from nltk.tokenize import WhitespaceTokenizer as nltk_ws_tkn
+from nltk.tokenize import wordpunct_tokenize, word_tokenize
+
+
+class TestBase(unittest.TestCase):
+    def _assert_message(self, expected_output: List[str], input: str) -> str:
+        return f"Expected output '{expected_output}' with input '{input}'"
+
+    def _run_test(self, tokenizer: Callable, tkn_func: Callable, input: str) -> None:
+        expected_output: List[str] = tkn_func(input)
+        self.__check_equal(
+            tokenizer=tokenizer, expected_output=expected_output, input=input
+        )
+
+    def __check_equal(
+        self, tokenizer: Callable, expected_output: List[str], input: str
+    ) -> None:
+        self.assertEqual(
+            tokenizer(input),
+            expected_output,
+            self._assert_message(expected_output=expected_output, input=input),
+        )
 
 
 class Tokenizers(Enum):
@@ -13,74 +34,108 @@ class Tokenizers(Enum):
     PUNCT = PunctTokenizer
 
 
-class TestWhitespace(unittest.TestCase):
+class TestWhitespace(TestBase):
     @property
     def tokenizer(self) -> Callable:
         return Tokenizers.WHITESPACE.value()
 
-    def __assert_message(self, expected_output: List[str], input: str) -> str:
-        return f"Expected output '{expected_output}' with input '{input}'"
+    def test_empty_string(self) -> None:
+        self._run_test(self.tokenizer.tokenize, nltk_ws_tkn().tokenize, "")
 
-    def __check_equal(self, expected_output: List[str], input: str) -> None:
-        self.assertEqual(
-            self.tokenizer.tokenize(input),
-            expected_output,
-            self.__assert_message(expected_output=expected_output, input=input),
+    def test_single_space(self) -> None:
+        self._run_test(self.tokenizer.tokenize, nltk_ws_tkn().tokenize, " ")
+
+    def test_simple_phrase(self) -> None:
+        self._run_test(
+            self.tokenizer.tokenize,
+            nltk_ws_tkn().tokenize,
+            "Lorem ipsum dolor sit amet",
         )
 
-    def __run_test(self, input) -> None:
-        expected_output: List[str] = nltk_whitespace_tokenizer().tokenize(input)
-        self.__check_equal(expected_output=expected_output, input=input)
+    def test_with_punct(self) -> None:
+        self._run_test(
+            self.tokenizer.tokenize,
+            nltk_ws_tkn().tokenize,
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        )
 
-    def test_empty_string(self):
-        self.__run_test("")
+    def test_empty_head(self) -> None:
+        self._run_test(
+            self.tokenizer.tokenize, nltk_ws_tkn().tokenize, "       Lorem ipsum"
+        )
 
-    def test_single_space(self):
-        self.__run_test(" ")
+    def test_empty_tail(self) -> None:
+        self._run_test(
+            self.tokenizer.tokenize, nltk_ws_tkn().tokenize, "Lorem ipsum        "
+        )
 
-    def test_simple_phrase(self):
-        self.__run_test("Lorem ipsum dolor sit amet")
+    def test_single_letters(self) -> None:
+        self._run_test(self.tokenizer.tokenize, nltk_ws_tkn().tokenize, "L O R E M")
 
-    def test_with_punct(self):
-        self.__run_test("Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
+    def test_long_empty(self) -> None:
+        self._run_test(
+            self.tokenizer.tokenize, nltk_ws_tkn().tokenize, "                  "
+        )
 
-    def test_empty_head(self):
-        self.__run_test("       Lorem ipsum")
-
-    def test_empty_tail(self):
-        self.__run_test("Lorem ipsum        ")
-
-    def test_single_letters(self):
-        self.__run_test("L O R E M")
-
-    def test_long_empty(self):
-        self.__run_test("                  ")
+    def test_only_punct(self) -> None:
+        self._run_test(self.tokenizer.tokenize, nltk_ws_tkn().tokenize, ",,,?.!")
 
 
-class TestNaivePunct(unittest.TestCase):
+class TestNaivePunct(TestBase):
     @property
     def tokenizer(self) -> Callable:
         return Tokenizers.NAIVEPUNCT.value()
 
-    def __assert_message(self, expected_output: List[str], input: str) -> str:
-        return f"Expected output '{expected_output}' with input '{input}'"
+    def test_empty_string(self) -> None:
+        self._run_test(self.tokenizer.tokenize, wordpunct_tokenize, "")
 
-    def __check_equal(self, expected_output: List[str], input: str) -> None:
-        self.assertEqual(
-            self.tokenizer.tokenize(input),
-            expected_output,
-            self.__assert_message(expected_output=expected_output, input=input),
+    def test_single_space(self) -> None:
+        self._run_test(self.tokenizer.tokenize, wordpunct_tokenize, " ")
+
+    def test_simple_phrase(self) -> None:
+        self._run_test(
+            self.tokenizer.tokenize, wordpunct_tokenize, "Burger costs $5.4 dollars"
         )
 
-    def __run_test(self, input) -> None:
-        expected_output: List[str] = nltk_whitespace_tokenizer().tokenize(input)
-        self.__check_equal(expected_output=expected_output, input=input)
+    def test_with_punct(self) -> None:
+        self._run_test(
+            self.tokenizer.tokenize,
+            wordpunct_tokenize,
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        )
 
-    def test_empty_string(self):
-        self.__run_test("")
+    def test_only_punct(self) -> None:
+        self._run_test(self.tokenizer.tokenize, wordpunct_tokenize, ",?.,;")
 
-    def test_single_space(self):
-        self.__run_test(" ")
+    def test_empty_tail(self) -> None:
+        self._run_test(
+            self.tokenizer.tokenize, wordpunct_tokenize, "Lorem ipsum,      "
+        )
+
+    def test_long_empty(self) -> None:
+        self._run_test(self.tokenizer.tokenize, wordpunct_tokenize, "                ")
+
+    def test_single_letters(self) -> None:
+        self._run_test(self.tokenizer.tokenize, wordpunct_tokenize, "L, O, R, E, M,")
+
+    def test_one_letter(self) -> None:
+        self._run_test(self.tokenizer.tokenize, wordpunct_tokenize, "L")
+
+
+# class TestPunct(unittest.TestCase):
+#     @property
+#     def tokenizer(self) -> Callable:
+#         return Tokenizers.PUNCT.value()
+
+#     def __check_equal(self, expected_output: List[str], input: str) -> None:
+#         self.assertEqual(
+#             self.tokenizer.tokenize.tokenize(input),
+#             expected_output,
+#             self.__assert_message(expected_output=expected_output, input=input),
+#         )
+
+#     def test_empty_string(self):
+#         _self._run_test()
 
 
 if __name__ == "__main__":

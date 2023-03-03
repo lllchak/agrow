@@ -45,8 +45,8 @@ RUN apk add --no-cache --virtual .build-deps \
     build-base openssl-dev libffi-dev \
     --no-cache bash
 
-# RUN pip install --upgrade pip
-# RUN pip install -r requirements.txt
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
 
 ENTRYPOINT [ "bash" ]
 CMD [ ".scripts/test_all.sh" ]
