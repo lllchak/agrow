@@ -1,4 +1,4 @@
-# Tecode
+# Agrow
 # Table of content
 - [Environment](#environment)
 - [For developers](#for-developers)
