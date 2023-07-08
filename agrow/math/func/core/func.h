@@ -1,14 +1,15 @@
 
 #include <ctype.h>
 #include <stdint.h>
+#include <stdbool.h>
 
-#define EPS 1e-17
-#define PI 3.14159265358979324
-#define EXP 2.71828182845904523
-#define NAN 0.0 / 0.0
-#define INF 1.0 / 0.0
-#define MAX_DOUBLE 1.7976931348623157e308
-#define ADOMAIN 1
+#define AG_EPS 1e-17
+#define AG_PI 3.14159265358979324
+#define AG_EXP 2.71828182845904523
+#define AG_NAN 0.0 / 0.0
+#define AG_INF 1.0 / 0.0
+#define AG_MAX_DOUBLE 1.7976931348623157e308
+#define AG_ADOMAIN 1
 
 /*
     @brief This function is a series expansion of math function arcsin(x)
@@ -38,7 +39,7 @@ long double ag_atan(double source);
     @param source is a real number
     @return true or false(bool)
 */
-int8_t ag_is_zero(double source);
+bool ag_is_zero(double source);
 
 /*
     @brief This function is for getting an absolute value of the real number
