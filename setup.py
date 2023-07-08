@@ -1,6 +1,12 @@
 from setuptools import setup, Extension
 from Cython.Distutils import build_ext
 
+def make_package_from_path(path: str) -> str:
+    return '.'.join(path.split('/'))
+
+AUTHOR = "Pavel Lyulchak"
+EMAIL = "mediumchak@yandex.ru"
+
 NAME = "agrow"
 VERSION = "0.1"
 DESCR = "A small template project that shows how to wrap C/C++ code into python using Cython"
@@ -11,20 +17,20 @@ with open("requirements.txt") as file:
 
 REQUIRES = reqs
 
-AUTHOR = "Pavel Lyulchak"
-EMAIL = "mediumchak@yandex.ru"
-
 LICENSE = "MIT Licence"
 
 MATH_FUNC_DIR = "agrow/math/func"
-PACKAGES = ['.'.join(MATH_FUNC_DIR.split('/'))]
+PACKAGES = [
+    make_package_from_path(MATH_FUNC_DIR)
+]
 
-math_func_ext = Extension(
-    '.'.join(MATH_FUNC_DIR.split('/')) + ".wrapped",
-    [MATH_FUNC_DIR + "/core/func.c", MATH_FUNC_DIR + "/wrapped.pyx"]
-)
-
-EXTENSIONS = [math_func_ext]
+EXTENSIONS = [
+    # agrow.math.func
+    Extension(
+        '.'.join(MATH_FUNC_DIR.split('/')) + ".wrapped", 
+        [MATH_FUNC_DIR + "/core/func.c", MATH_FUNC_DIR + "/wrapped.pyx"]
+    )
+]
 
 if __name__ == "__main__":
     setup(
