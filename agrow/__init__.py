@@ -1,5 +1,8 @@
-from . import text
-from . import math
+# from . import text
+from .math import func
 
 
-__all__ = [text, math]
+__all__ = [
+    "text",
+    "func"
+]
