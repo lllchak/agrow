@@ -1,5 +1,3 @@
-import dtypes
-
 from .src.base import BaseTokenizer
 from .src.regex import RegexTokenizer
 from .src.tokenizers import WhitespaceTokenizer, NaivePunctTokenizer, PunctTokenizer
