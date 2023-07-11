@@ -27,8 +27,8 @@ PACKAGES = [
 EXTENSIONS = [
     # agrow.math.func
     Extension(
-        '.'.join(MATH_FUNC_DIR.split('/')) + ".wrapped", 
-        [MATH_FUNC_DIR + "/core/func.c", MATH_FUNC_DIR + "/wrapped.pyx"]
+        '.'.join(MATH_FUNC_DIR.split('/')) + ".func", 
+        [MATH_FUNC_DIR + "/core/func.c", MATH_FUNC_DIR + "/func.pyx"]
     )
 ]
 

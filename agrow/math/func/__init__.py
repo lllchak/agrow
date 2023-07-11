@@ -1,4 +1,4 @@
-from .wrapped import (
+from .func import (
     is_zero,
     abs,
     fabs,

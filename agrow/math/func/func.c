@@ -744,8 +744,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__agrow__math__func__wrapped
-#define __PYX_HAVE_API__agrow__math__func__wrapped
+#define __PYX_HAVE__agrow__math__func__func
+#define __PYX_HAVE_API__agrow__math__func__func
 /* Early includes */
 #include "core/func.h"
 #ifdef _OPENMP
@@ -957,7 +957,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "agrow/math/func/wrapped.pyx",
+  "agrow/math/func/func.pyx",
 };
 
 /*--- Type declarations ---*/
@@ -1169,12 +1169,12 @@ static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
 /* Module declarations from 'libcpp' */
 
-/* Module declarations from 'agrow.math.func.wrapped' */
-#define __Pyx_MODULE_NAME "agrow.math.func.wrapped"
-extern int __pyx_module_is_main_agrow__math__func__wrapped;
-int __pyx_module_is_main_agrow__math__func__wrapped = 0;
+/* Module declarations from 'agrow.math.func.func' */
+#define __Pyx_MODULE_NAME "agrow.math.func.func"
+extern int __pyx_module_is_main_agrow__math__func__func;
+int __pyx_module_is_main_agrow__math__func__func = 0;
 
-/* Implementation of 'agrow.math.func.wrapped' */
+/* Implementation of 'agrow.math.func.func' */
 static const char __pyx_k_x[] = "x";
 static const char __pyx_k_y[] = "y";
 static const char __pyx_k_abs[] = "abs";
@@ -1199,12 +1199,12 @@ static const char __pyx_k_floor[] = "floor";
 static const char __pyx_k_source[] = "source";
 static const char __pyx_k_is_zero[] = "is_zero";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
-static const char __pyx_k_agrow_math_func_wrapped[] = "agrow.math.func.wrapped";
-static const char __pyx_k_agrow_math_func_wrapped_pyx[] = "agrow/math/func/wrapped.pyx";
+static const char __pyx_k_agrow_math_func_func[] = "agrow.math.func.func";
+static const char __pyx_k_agrow_math_func_func_pyx[] = "agrow/math/func/func.pyx";
 static PyObject *__pyx_n_s_abs;
 static PyObject *__pyx_n_s_acos;
-static PyObject *__pyx_n_s_agrow_math_func_wrapped;
-static PyObject *__pyx_kp_s_agrow_math_func_wrapped_pyx;
+static PyObject *__pyx_n_s_agrow_math_func_func;
+static PyObject *__pyx_kp_s_agrow_math_func_func_pyx;
 static PyObject *__pyx_n_s_asin;
 static PyObject *__pyx_n_s_atan;
 static PyObject *__pyx_n_s_base;
@@ -1227,22 +1227,22 @@ static PyObject *__pyx_n_s_tan;
 static PyObject *__pyx_n_s_test;
 static PyObject *__pyx_n_s_x;
 static PyObject *__pyx_n_s_y;
-static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_is_zero(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source); /* proto */
-static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_2abs(CYTHON_UNUSED PyObject *__pyx_self, long __pyx_v_source); /* proto */
-static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_4fabs(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source); /* proto */
-static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_6ceil(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source); /* proto */
-static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_8floor(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source); /* proto */
-static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_10fmod(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_x, double __pyx_v_y); /* proto */
-static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_12sqrt(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source); /* proto */
-static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_14exp(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source); /* proto */
-static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_16log(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source); /* proto */
-static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_18pow(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_base, double __pyx_v_exp); /* proto */
-static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_20asin(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source); /* proto */
-static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_22acos(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source); /* proto */
-static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_24atan(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source); /* proto */
-static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_26sin(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source); /* proto */
-static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_28cos(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source); /* proto */
-static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_30tan(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source); /* proto */
+static PyObject *__pyx_pf_5agrow_4math_4func_4func_is_zero(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source); /* proto */
+static PyObject *__pyx_pf_5agrow_4math_4func_4func_2abs(CYTHON_UNUSED PyObject *__pyx_self, long __pyx_v_source); /* proto */
+static PyObject *__pyx_pf_5agrow_4math_4func_4func_4fabs(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source); /* proto */
+static PyObject *__pyx_pf_5agrow_4math_4func_4func_6ceil(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source); /* proto */
+static PyObject *__pyx_pf_5agrow_4math_4func_4func_8floor(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source); /* proto */
+static PyObject *__pyx_pf_5agrow_4math_4func_4func_10fmod(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_x, double __pyx_v_y); /* proto */
+static PyObject *__pyx_pf_5agrow_4math_4func_4func_12sqrt(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source); /* proto */
+static PyObject *__pyx_pf_5agrow_4math_4func_4func_14exp(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source); /* proto */
+static PyObject *__pyx_pf_5agrow_4math_4func_4func_16log(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source); /* proto */
+static PyObject *__pyx_pf_5agrow_4math_4func_4func_18pow(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_base, double __pyx_v_exp); /* proto */
+static PyObject *__pyx_pf_5agrow_4math_4func_4func_20asin(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source); /* proto */
+static PyObject *__pyx_pf_5agrow_4math_4func_4func_22acos(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source); /* proto */
+static PyObject *__pyx_pf_5agrow_4math_4func_4func_24atan(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source); /* proto */
+static PyObject *__pyx_pf_5agrow_4math_4func_4func_26sin(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source); /* proto */
+static PyObject *__pyx_pf_5agrow_4math_4func_4func_28cos(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source); /* proto */
+static PyObject *__pyx_pf_5agrow_4math_4func_4func_30tan(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source); /* proto */
 static PyObject *__pyx_tuple_;
 static PyObject *__pyx_tuple__3;
 static PyObject *__pyx_tuple__5;
@@ -1277,7 +1277,7 @@ static PyObject *__pyx_codeobj__30;
 static PyObject *__pyx_codeobj__32;
 /* Late includes */
 
-/* "agrow/math/func/wrapped.pyx":28
+/* "agrow/math/func/func.pyx":28
  * 
  * 
  * def is_zero(double source):             # <<<<<<<<<<<<<<
@@ -1286,9 +1286,9 @@ static PyObject *__pyx_codeobj__32;
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_1is_zero(PyObject *__pyx_self, PyObject *__pyx_arg_source); /*proto*/
-static PyMethodDef __pyx_mdef_5agrow_4math_4func_7wrapped_1is_zero = {"is_zero", (PyCFunction)__pyx_pw_5agrow_4math_4func_7wrapped_1is_zero, METH_O, 0};
-static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_1is_zero(PyObject *__pyx_self, PyObject *__pyx_arg_source) {
+static PyObject *__pyx_pw_5agrow_4math_4func_4func_1is_zero(PyObject *__pyx_self, PyObject *__pyx_arg_source); /*proto*/
+static PyMethodDef __pyx_mdef_5agrow_4math_4func_4func_1is_zero = {"is_zero", (PyCFunction)__pyx_pw_5agrow_4math_4func_4func_1is_zero, METH_O, 0};
+static PyObject *__pyx_pw_5agrow_4math_4func_4func_1is_zero(PyObject *__pyx_self, PyObject *__pyx_arg_source) {
   double __pyx_v_source;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
@@ -1301,18 +1301,18 @@ static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_1is_zero(PyObject *__pyx_s
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
-  __Pyx_AddTraceback("agrow.math.func.wrapped.is_zero", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("agrow.math.func.func.is_zero", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_5agrow_4math_4func_7wrapped_is_zero(__pyx_self, ((double)__pyx_v_source));
+  __pyx_r = __pyx_pf_5agrow_4math_4func_4func_is_zero(__pyx_self, ((double)__pyx_v_source));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_is_zero(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source) {
+static PyObject *__pyx_pf_5agrow_4math_4func_4func_is_zero(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -1321,7 +1321,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_is_zero(CYTHON_UNUSED PyOb
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("is_zero", 0);
 
-  /* "agrow/math/func/wrapped.pyx":29
+  /* "agrow/math/func/func.pyx":29
  * 
  * def is_zero(double source):
  *     return ag_is_zero(source)             # <<<<<<<<<<<<<<
@@ -1335,7 +1335,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_is_zero(CYTHON_UNUSED PyOb
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "agrow/math/func/wrapped.pyx":28
+  /* "agrow/math/func/func.pyx":28
  * 
  * 
  * def is_zero(double source):             # <<<<<<<<<<<<<<
@@ -1346,7 +1346,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_is_zero(CYTHON_UNUSED PyOb
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("agrow.math.func.wrapped.is_zero", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("agrow.math.func.func.is_zero", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1354,7 +1354,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_is_zero(CYTHON_UNUSED PyOb
   return __pyx_r;
 }
 
-/* "agrow/math/func/wrapped.pyx":32
+/* "agrow/math/func/func.pyx":32
  * 
  * 
  * def abs(long int source):             # <<<<<<<<<<<<<<
@@ -1363,9 +1363,9 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_is_zero(CYTHON_UNUSED PyOb
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_3abs(PyObject *__pyx_self, PyObject *__pyx_arg_source); /*proto*/
-static PyMethodDef __pyx_mdef_5agrow_4math_4func_7wrapped_3abs = {"abs", (PyCFunction)__pyx_pw_5agrow_4math_4func_7wrapped_3abs, METH_O, 0};
-static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_3abs(PyObject *__pyx_self, PyObject *__pyx_arg_source) {
+static PyObject *__pyx_pw_5agrow_4math_4func_4func_3abs(PyObject *__pyx_self, PyObject *__pyx_arg_source); /*proto*/
+static PyMethodDef __pyx_mdef_5agrow_4math_4func_4func_3abs = {"abs", (PyCFunction)__pyx_pw_5agrow_4math_4func_4func_3abs, METH_O, 0};
+static PyObject *__pyx_pw_5agrow_4math_4func_4func_3abs(PyObject *__pyx_self, PyObject *__pyx_arg_source) {
   long __pyx_v_source;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
@@ -1378,18 +1378,18 @@ static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_3abs(PyObject *__pyx_self,
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
-  __Pyx_AddTraceback("agrow.math.func.wrapped.abs", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("agrow.math.func.func.abs", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_5agrow_4math_4func_7wrapped_2abs(__pyx_self, ((long)__pyx_v_source));
+  __pyx_r = __pyx_pf_5agrow_4math_4func_4func_2abs(__pyx_self, ((long)__pyx_v_source));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_2abs(CYTHON_UNUSED PyObject *__pyx_self, long __pyx_v_source) {
+static PyObject *__pyx_pf_5agrow_4math_4func_4func_2abs(CYTHON_UNUSED PyObject *__pyx_self, long __pyx_v_source) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -1398,7 +1398,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_2abs(CYTHON_UNUSED PyObjec
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("abs", 0);
 
-  /* "agrow/math/func/wrapped.pyx":33
+  /* "agrow/math/func/func.pyx":33
  * 
  * def abs(long int source):
  *     return ag_abs(source)             # <<<<<<<<<<<<<<
@@ -1412,7 +1412,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_2abs(CYTHON_UNUSED PyObjec
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "agrow/math/func/wrapped.pyx":32
+  /* "agrow/math/func/func.pyx":32
  * 
  * 
  * def abs(long int source):             # <<<<<<<<<<<<<<
@@ -1423,7 +1423,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_2abs(CYTHON_UNUSED PyObjec
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("agrow.math.func.wrapped.abs", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("agrow.math.func.func.abs", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1431,7 +1431,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_2abs(CYTHON_UNUSED PyObjec
   return __pyx_r;
 }
 
-/* "agrow/math/func/wrapped.pyx":36
+/* "agrow/math/func/func.pyx":36
  * 
  * 
  * def fabs(double source):             # <<<<<<<<<<<<<<
@@ -1440,9 +1440,9 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_2abs(CYTHON_UNUSED PyObjec
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_5fabs(PyObject *__pyx_self, PyObject *__pyx_arg_source); /*proto*/
-static PyMethodDef __pyx_mdef_5agrow_4math_4func_7wrapped_5fabs = {"fabs", (PyCFunction)__pyx_pw_5agrow_4math_4func_7wrapped_5fabs, METH_O, 0};
-static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_5fabs(PyObject *__pyx_self, PyObject *__pyx_arg_source) {
+static PyObject *__pyx_pw_5agrow_4math_4func_4func_5fabs(PyObject *__pyx_self, PyObject *__pyx_arg_source); /*proto*/
+static PyMethodDef __pyx_mdef_5agrow_4math_4func_4func_5fabs = {"fabs", (PyCFunction)__pyx_pw_5agrow_4math_4func_4func_5fabs, METH_O, 0};
+static PyObject *__pyx_pw_5agrow_4math_4func_4func_5fabs(PyObject *__pyx_self, PyObject *__pyx_arg_source) {
   double __pyx_v_source;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
@@ -1455,18 +1455,18 @@ static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_5fabs(PyObject *__pyx_self
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
-  __Pyx_AddTraceback("agrow.math.func.wrapped.fabs", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("agrow.math.func.func.fabs", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_5agrow_4math_4func_7wrapped_4fabs(__pyx_self, ((double)__pyx_v_source));
+  __pyx_r = __pyx_pf_5agrow_4math_4func_4func_4fabs(__pyx_self, ((double)__pyx_v_source));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_4fabs(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source) {
+static PyObject *__pyx_pf_5agrow_4math_4func_4func_4fabs(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -1475,7 +1475,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_4fabs(CYTHON_UNUSED PyObje
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("fabs", 0);
 
-  /* "agrow/math/func/wrapped.pyx":37
+  /* "agrow/math/func/func.pyx":37
  * 
  * def fabs(double source):
  *     return ag_fabs(source)             # <<<<<<<<<<<<<<
@@ -1489,7 +1489,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_4fabs(CYTHON_UNUSED PyObje
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "agrow/math/func/wrapped.pyx":36
+  /* "agrow/math/func/func.pyx":36
  * 
  * 
  * def fabs(double source):             # <<<<<<<<<<<<<<
@@ -1500,7 +1500,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_4fabs(CYTHON_UNUSED PyObje
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("agrow.math.func.wrapped.fabs", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("agrow.math.func.func.fabs", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1508,7 +1508,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_4fabs(CYTHON_UNUSED PyObje
   return __pyx_r;
 }
 
-/* "agrow/math/func/wrapped.pyx":40
+/* "agrow/math/func/func.pyx":40
  * 
  * 
  * def ceil(double source):             # <<<<<<<<<<<<<<
@@ -1517,9 +1517,9 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_4fabs(CYTHON_UNUSED PyObje
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_7ceil(PyObject *__pyx_self, PyObject *__pyx_arg_source); /*proto*/
-static PyMethodDef __pyx_mdef_5agrow_4math_4func_7wrapped_7ceil = {"ceil", (PyCFunction)__pyx_pw_5agrow_4math_4func_7wrapped_7ceil, METH_O, 0};
-static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_7ceil(PyObject *__pyx_self, PyObject *__pyx_arg_source) {
+static PyObject *__pyx_pw_5agrow_4math_4func_4func_7ceil(PyObject *__pyx_self, PyObject *__pyx_arg_source); /*proto*/
+static PyMethodDef __pyx_mdef_5agrow_4math_4func_4func_7ceil = {"ceil", (PyCFunction)__pyx_pw_5agrow_4math_4func_4func_7ceil, METH_O, 0};
+static PyObject *__pyx_pw_5agrow_4math_4func_4func_7ceil(PyObject *__pyx_self, PyObject *__pyx_arg_source) {
   double __pyx_v_source;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
@@ -1532,18 +1532,18 @@ static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_7ceil(PyObject *__pyx_self
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
-  __Pyx_AddTraceback("agrow.math.func.wrapped.ceil", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("agrow.math.func.func.ceil", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_5agrow_4math_4func_7wrapped_6ceil(__pyx_self, ((double)__pyx_v_source));
+  __pyx_r = __pyx_pf_5agrow_4math_4func_4func_6ceil(__pyx_self, ((double)__pyx_v_source));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_6ceil(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source) {
+static PyObject *__pyx_pf_5agrow_4math_4func_4func_6ceil(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -1552,7 +1552,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_6ceil(CYTHON_UNUSED PyObje
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("ceil", 0);
 
-  /* "agrow/math/func/wrapped.pyx":41
+  /* "agrow/math/func/func.pyx":41
  * 
  * def ceil(double source):
  *     return ag_ceil(source)             # <<<<<<<<<<<<<<
@@ -1566,7 +1566,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_6ceil(CYTHON_UNUSED PyObje
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "agrow/math/func/wrapped.pyx":40
+  /* "agrow/math/func/func.pyx":40
  * 
  * 
  * def ceil(double source):             # <<<<<<<<<<<<<<
@@ -1577,7 +1577,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_6ceil(CYTHON_UNUSED PyObje
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("agrow.math.func.wrapped.ceil", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("agrow.math.func.func.ceil", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1585,7 +1585,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_6ceil(CYTHON_UNUSED PyObje
   return __pyx_r;
 }
 
-/* "agrow/math/func/wrapped.pyx":44
+/* "agrow/math/func/func.pyx":44
  * 
  * 
  * def floor(double source):             # <<<<<<<<<<<<<<
@@ -1594,9 +1594,9 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_6ceil(CYTHON_UNUSED PyObje
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_9floor(PyObject *__pyx_self, PyObject *__pyx_arg_source); /*proto*/
-static PyMethodDef __pyx_mdef_5agrow_4math_4func_7wrapped_9floor = {"floor", (PyCFunction)__pyx_pw_5agrow_4math_4func_7wrapped_9floor, METH_O, 0};
-static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_9floor(PyObject *__pyx_self, PyObject *__pyx_arg_source) {
+static PyObject *__pyx_pw_5agrow_4math_4func_4func_9floor(PyObject *__pyx_self, PyObject *__pyx_arg_source); /*proto*/
+static PyMethodDef __pyx_mdef_5agrow_4math_4func_4func_9floor = {"floor", (PyCFunction)__pyx_pw_5agrow_4math_4func_4func_9floor, METH_O, 0};
+static PyObject *__pyx_pw_5agrow_4math_4func_4func_9floor(PyObject *__pyx_self, PyObject *__pyx_arg_source) {
   double __pyx_v_source;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
@@ -1609,18 +1609,18 @@ static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_9floor(PyObject *__pyx_sel
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
-  __Pyx_AddTraceback("agrow.math.func.wrapped.floor", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("agrow.math.func.func.floor", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_5agrow_4math_4func_7wrapped_8floor(__pyx_self, ((double)__pyx_v_source));
+  __pyx_r = __pyx_pf_5agrow_4math_4func_4func_8floor(__pyx_self, ((double)__pyx_v_source));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_8floor(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source) {
+static PyObject *__pyx_pf_5agrow_4math_4func_4func_8floor(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -1629,7 +1629,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_8floor(CYTHON_UNUSED PyObj
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("floor", 0);
 
-  /* "agrow/math/func/wrapped.pyx":45
+  /* "agrow/math/func/func.pyx":45
  * 
  * def floor(double source):
  *     return ag_floor(source)             # <<<<<<<<<<<<<<
@@ -1643,7 +1643,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_8floor(CYTHON_UNUSED PyObj
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "agrow/math/func/wrapped.pyx":44
+  /* "agrow/math/func/func.pyx":44
  * 
  * 
  * def floor(double source):             # <<<<<<<<<<<<<<
@@ -1654,7 +1654,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_8floor(CYTHON_UNUSED PyObj
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("agrow.math.func.wrapped.floor", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("agrow.math.func.func.floor", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1662,7 +1662,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_8floor(CYTHON_UNUSED PyObj
   return __pyx_r;
 }
 
-/* "agrow/math/func/wrapped.pyx":48
+/* "agrow/math/func/func.pyx":48
  * 
  * 
  * def fmod(double x, double y):             # <<<<<<<<<<<<<<
@@ -1671,9 +1671,9 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_8floor(CYTHON_UNUSED PyObj
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_11fmod(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_5agrow_4math_4func_7wrapped_11fmod = {"fmod", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_5agrow_4math_4func_7wrapped_11fmod, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_11fmod(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_5agrow_4math_4func_4func_11fmod(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_5agrow_4math_4func_4func_11fmod = {"fmod", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_5agrow_4math_4func_4func_11fmod, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_5agrow_4math_4func_4func_11fmod(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   double __pyx_v_x;
   double __pyx_v_y;
   int __pyx_lineno = 0;
@@ -1724,18 +1724,18 @@ static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_11fmod(PyObject *__pyx_sel
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("fmod", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 48, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("agrow.math.func.wrapped.fmod", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("agrow.math.func.func.fmod", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_5agrow_4math_4func_7wrapped_10fmod(__pyx_self, __pyx_v_x, __pyx_v_y);
+  __pyx_r = __pyx_pf_5agrow_4math_4func_4func_10fmod(__pyx_self, __pyx_v_x, __pyx_v_y);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_10fmod(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_x, double __pyx_v_y) {
+static PyObject *__pyx_pf_5agrow_4math_4func_4func_10fmod(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_x, double __pyx_v_y) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -1744,7 +1744,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_10fmod(CYTHON_UNUSED PyObj
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("fmod", 0);
 
-  /* "agrow/math/func/wrapped.pyx":49
+  /* "agrow/math/func/func.pyx":49
  * 
  * def fmod(double x, double y):
  *     return ag_fmod(x, y)             # <<<<<<<<<<<<<<
@@ -1758,7 +1758,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_10fmod(CYTHON_UNUSED PyObj
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "agrow/math/func/wrapped.pyx":48
+  /* "agrow/math/func/func.pyx":48
  * 
  * 
  * def fmod(double x, double y):             # <<<<<<<<<<<<<<
@@ -1769,7 +1769,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_10fmod(CYTHON_UNUSED PyObj
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("agrow.math.func.wrapped.fmod", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("agrow.math.func.func.fmod", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1777,7 +1777,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_10fmod(CYTHON_UNUSED PyObj
   return __pyx_r;
 }
 
-/* "agrow/math/func/wrapped.pyx":52
+/* "agrow/math/func/func.pyx":52
  * 
  * 
  * def sqrt(double source):             # <<<<<<<<<<<<<<
@@ -1786,9 +1786,9 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_10fmod(CYTHON_UNUSED PyObj
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_13sqrt(PyObject *__pyx_self, PyObject *__pyx_arg_source); /*proto*/
-static PyMethodDef __pyx_mdef_5agrow_4math_4func_7wrapped_13sqrt = {"sqrt", (PyCFunction)__pyx_pw_5agrow_4math_4func_7wrapped_13sqrt, METH_O, 0};
-static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_13sqrt(PyObject *__pyx_self, PyObject *__pyx_arg_source) {
+static PyObject *__pyx_pw_5agrow_4math_4func_4func_13sqrt(PyObject *__pyx_self, PyObject *__pyx_arg_source); /*proto*/
+static PyMethodDef __pyx_mdef_5agrow_4math_4func_4func_13sqrt = {"sqrt", (PyCFunction)__pyx_pw_5agrow_4math_4func_4func_13sqrt, METH_O, 0};
+static PyObject *__pyx_pw_5agrow_4math_4func_4func_13sqrt(PyObject *__pyx_self, PyObject *__pyx_arg_source) {
   double __pyx_v_source;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
@@ -1801,18 +1801,18 @@ static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_13sqrt(PyObject *__pyx_sel
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
-  __Pyx_AddTraceback("agrow.math.func.wrapped.sqrt", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("agrow.math.func.func.sqrt", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_5agrow_4math_4func_7wrapped_12sqrt(__pyx_self, ((double)__pyx_v_source));
+  __pyx_r = __pyx_pf_5agrow_4math_4func_4func_12sqrt(__pyx_self, ((double)__pyx_v_source));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_12sqrt(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source) {
+static PyObject *__pyx_pf_5agrow_4math_4func_4func_12sqrt(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -1821,7 +1821,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_12sqrt(CYTHON_UNUSED PyObj
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("sqrt", 0);
 
-  /* "agrow/math/func/wrapped.pyx":53
+  /* "agrow/math/func/func.pyx":53
  * 
  * def sqrt(double source):
  *     return ag_sqrt(source)             # <<<<<<<<<<<<<<
@@ -1835,7 +1835,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_12sqrt(CYTHON_UNUSED PyObj
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "agrow/math/func/wrapped.pyx":52
+  /* "agrow/math/func/func.pyx":52
  * 
  * 
  * def sqrt(double source):             # <<<<<<<<<<<<<<
@@ -1846,7 +1846,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_12sqrt(CYTHON_UNUSED PyObj
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("agrow.math.func.wrapped.sqrt", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("agrow.math.func.func.sqrt", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1854,7 +1854,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_12sqrt(CYTHON_UNUSED PyObj
   return __pyx_r;
 }
 
-/* "agrow/math/func/wrapped.pyx":56
+/* "agrow/math/func/func.pyx":56
  * 
  * 
  * def exp(double source):             # <<<<<<<<<<<<<<
@@ -1863,9 +1863,9 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_12sqrt(CYTHON_UNUSED PyObj
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_15exp(PyObject *__pyx_self, PyObject *__pyx_arg_source); /*proto*/
-static PyMethodDef __pyx_mdef_5agrow_4math_4func_7wrapped_15exp = {"exp", (PyCFunction)__pyx_pw_5agrow_4math_4func_7wrapped_15exp, METH_O, 0};
-static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_15exp(PyObject *__pyx_self, PyObject *__pyx_arg_source) {
+static PyObject *__pyx_pw_5agrow_4math_4func_4func_15exp(PyObject *__pyx_self, PyObject *__pyx_arg_source); /*proto*/
+static PyMethodDef __pyx_mdef_5agrow_4math_4func_4func_15exp = {"exp", (PyCFunction)__pyx_pw_5agrow_4math_4func_4func_15exp, METH_O, 0};
+static PyObject *__pyx_pw_5agrow_4math_4func_4func_15exp(PyObject *__pyx_self, PyObject *__pyx_arg_source) {
   double __pyx_v_source;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
@@ -1878,18 +1878,18 @@ static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_15exp(PyObject *__pyx_self
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
-  __Pyx_AddTraceback("agrow.math.func.wrapped.exp", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("agrow.math.func.func.exp", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_5agrow_4math_4func_7wrapped_14exp(__pyx_self, ((double)__pyx_v_source));
+  __pyx_r = __pyx_pf_5agrow_4math_4func_4func_14exp(__pyx_self, ((double)__pyx_v_source));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_14exp(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source) {
+static PyObject *__pyx_pf_5agrow_4math_4func_4func_14exp(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -1898,7 +1898,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_14exp(CYTHON_UNUSED PyObje
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("exp", 0);
 
-  /* "agrow/math/func/wrapped.pyx":57
+  /* "agrow/math/func/func.pyx":57
  * 
  * def exp(double source):
  *     return ag_exp(source)             # <<<<<<<<<<<<<<
@@ -1912,7 +1912,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_14exp(CYTHON_UNUSED PyObje
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "agrow/math/func/wrapped.pyx":56
+  /* "agrow/math/func/func.pyx":56
  * 
  * 
  * def exp(double source):             # <<<<<<<<<<<<<<
@@ -1923,7 +1923,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_14exp(CYTHON_UNUSED PyObje
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("agrow.math.func.wrapped.exp", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("agrow.math.func.func.exp", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1931,7 +1931,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_14exp(CYTHON_UNUSED PyObje
   return __pyx_r;
 }
 
-/* "agrow/math/func/wrapped.pyx":60
+/* "agrow/math/func/func.pyx":60
  * 
  * 
  * def log(double source):             # <<<<<<<<<<<<<<
@@ -1940,9 +1940,9 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_14exp(CYTHON_UNUSED PyObje
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_17log(PyObject *__pyx_self, PyObject *__pyx_arg_source); /*proto*/
-static PyMethodDef __pyx_mdef_5agrow_4math_4func_7wrapped_17log = {"log", (PyCFunction)__pyx_pw_5agrow_4math_4func_7wrapped_17log, METH_O, 0};
-static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_17log(PyObject *__pyx_self, PyObject *__pyx_arg_source) {
+static PyObject *__pyx_pw_5agrow_4math_4func_4func_17log(PyObject *__pyx_self, PyObject *__pyx_arg_source); /*proto*/
+static PyMethodDef __pyx_mdef_5agrow_4math_4func_4func_17log = {"log", (PyCFunction)__pyx_pw_5agrow_4math_4func_4func_17log, METH_O, 0};
+static PyObject *__pyx_pw_5agrow_4math_4func_4func_17log(PyObject *__pyx_self, PyObject *__pyx_arg_source) {
   double __pyx_v_source;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
@@ -1955,18 +1955,18 @@ static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_17log(PyObject *__pyx_self
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
-  __Pyx_AddTraceback("agrow.math.func.wrapped.log", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("agrow.math.func.func.log", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_5agrow_4math_4func_7wrapped_16log(__pyx_self, ((double)__pyx_v_source));
+  __pyx_r = __pyx_pf_5agrow_4math_4func_4func_16log(__pyx_self, ((double)__pyx_v_source));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_16log(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source) {
+static PyObject *__pyx_pf_5agrow_4math_4func_4func_16log(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -1975,7 +1975,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_16log(CYTHON_UNUSED PyObje
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("log", 0);
 
-  /* "agrow/math/func/wrapped.pyx":61
+  /* "agrow/math/func/func.pyx":61
  * 
  * def log(double source):
  *     return ag_log(source)             # <<<<<<<<<<<<<<
@@ -1989,7 +1989,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_16log(CYTHON_UNUSED PyObje
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "agrow/math/func/wrapped.pyx":60
+  /* "agrow/math/func/func.pyx":60
  * 
  * 
  * def log(double source):             # <<<<<<<<<<<<<<
@@ -2000,7 +2000,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_16log(CYTHON_UNUSED PyObje
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("agrow.math.func.wrapped.log", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("agrow.math.func.func.log", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2008,7 +2008,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_16log(CYTHON_UNUSED PyObje
   return __pyx_r;
 }
 
-/* "agrow/math/func/wrapped.pyx":64
+/* "agrow/math/func/func.pyx":64
  * 
  * 
  * def pow(double base, double exp):             # <<<<<<<<<<<<<<
@@ -2017,9 +2017,9 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_16log(CYTHON_UNUSED PyObje
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_19pow(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_5agrow_4math_4func_7wrapped_19pow = {"pow", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_5agrow_4math_4func_7wrapped_19pow, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_19pow(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_5agrow_4math_4func_4func_19pow(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_5agrow_4math_4func_4func_19pow = {"pow", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_5agrow_4math_4func_4func_19pow, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_5agrow_4math_4func_4func_19pow(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   double __pyx_v_base;
   double __pyx_v_exp;
   int __pyx_lineno = 0;
@@ -2070,18 +2070,18 @@ static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_19pow(PyObject *__pyx_self
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("pow", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 64, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("agrow.math.func.wrapped.pow", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("agrow.math.func.func.pow", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_5agrow_4math_4func_7wrapped_18pow(__pyx_self, __pyx_v_base, __pyx_v_exp);
+  __pyx_r = __pyx_pf_5agrow_4math_4func_4func_18pow(__pyx_self, __pyx_v_base, __pyx_v_exp);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_18pow(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_base, double __pyx_v_exp) {
+static PyObject *__pyx_pf_5agrow_4math_4func_4func_18pow(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_base, double __pyx_v_exp) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2090,7 +2090,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_18pow(CYTHON_UNUSED PyObje
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("pow", 0);
 
-  /* "agrow/math/func/wrapped.pyx":65
+  /* "agrow/math/func/func.pyx":65
  * 
  * def pow(double base, double exp):
  *     return ag_pow(base, exp)             # <<<<<<<<<<<<<<
@@ -2104,7 +2104,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_18pow(CYTHON_UNUSED PyObje
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "agrow/math/func/wrapped.pyx":64
+  /* "agrow/math/func/func.pyx":64
  * 
  * 
  * def pow(double base, double exp):             # <<<<<<<<<<<<<<
@@ -2115,7 +2115,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_18pow(CYTHON_UNUSED PyObje
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("agrow.math.func.wrapped.pow", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("agrow.math.func.func.pow", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2123,7 +2123,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_18pow(CYTHON_UNUSED PyObje
   return __pyx_r;
 }
 
-/* "agrow/math/func/wrapped.pyx":68
+/* "agrow/math/func/func.pyx":68
  * 
  * 
  * def asin(double source):             # <<<<<<<<<<<<<<
@@ -2132,9 +2132,9 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_18pow(CYTHON_UNUSED PyObje
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_21asin(PyObject *__pyx_self, PyObject *__pyx_arg_source); /*proto*/
-static PyMethodDef __pyx_mdef_5agrow_4math_4func_7wrapped_21asin = {"asin", (PyCFunction)__pyx_pw_5agrow_4math_4func_7wrapped_21asin, METH_O, 0};
-static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_21asin(PyObject *__pyx_self, PyObject *__pyx_arg_source) {
+static PyObject *__pyx_pw_5agrow_4math_4func_4func_21asin(PyObject *__pyx_self, PyObject *__pyx_arg_source); /*proto*/
+static PyMethodDef __pyx_mdef_5agrow_4math_4func_4func_21asin = {"asin", (PyCFunction)__pyx_pw_5agrow_4math_4func_4func_21asin, METH_O, 0};
+static PyObject *__pyx_pw_5agrow_4math_4func_4func_21asin(PyObject *__pyx_self, PyObject *__pyx_arg_source) {
   double __pyx_v_source;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
@@ -2147,18 +2147,18 @@ static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_21asin(PyObject *__pyx_sel
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
-  __Pyx_AddTraceback("agrow.math.func.wrapped.asin", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("agrow.math.func.func.asin", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_5agrow_4math_4func_7wrapped_20asin(__pyx_self, ((double)__pyx_v_source));
+  __pyx_r = __pyx_pf_5agrow_4math_4func_4func_20asin(__pyx_self, ((double)__pyx_v_source));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_20asin(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source) {
+static PyObject *__pyx_pf_5agrow_4math_4func_4func_20asin(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2167,7 +2167,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_20asin(CYTHON_UNUSED PyObj
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("asin", 0);
 
-  /* "agrow/math/func/wrapped.pyx":69
+  /* "agrow/math/func/func.pyx":69
  * 
  * def asin(double source):
  *     return ag_asin(source)             # <<<<<<<<<<<<<<
@@ -2181,7 +2181,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_20asin(CYTHON_UNUSED PyObj
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "agrow/math/func/wrapped.pyx":68
+  /* "agrow/math/func/func.pyx":68
  * 
  * 
  * def asin(double source):             # <<<<<<<<<<<<<<
@@ -2192,7 +2192,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_20asin(CYTHON_UNUSED PyObj
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("agrow.math.func.wrapped.asin", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("agrow.math.func.func.asin", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2200,7 +2200,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_20asin(CYTHON_UNUSED PyObj
   return __pyx_r;
 }
 
-/* "agrow/math/func/wrapped.pyx":72
+/* "agrow/math/func/func.pyx":72
  * 
  * 
  * def acos(double source):             # <<<<<<<<<<<<<<
@@ -2209,9 +2209,9 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_20asin(CYTHON_UNUSED PyObj
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_23acos(PyObject *__pyx_self, PyObject *__pyx_arg_source); /*proto*/
-static PyMethodDef __pyx_mdef_5agrow_4math_4func_7wrapped_23acos = {"acos", (PyCFunction)__pyx_pw_5agrow_4math_4func_7wrapped_23acos, METH_O, 0};
-static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_23acos(PyObject *__pyx_self, PyObject *__pyx_arg_source) {
+static PyObject *__pyx_pw_5agrow_4math_4func_4func_23acos(PyObject *__pyx_self, PyObject *__pyx_arg_source); /*proto*/
+static PyMethodDef __pyx_mdef_5agrow_4math_4func_4func_23acos = {"acos", (PyCFunction)__pyx_pw_5agrow_4math_4func_4func_23acos, METH_O, 0};
+static PyObject *__pyx_pw_5agrow_4math_4func_4func_23acos(PyObject *__pyx_self, PyObject *__pyx_arg_source) {
   double __pyx_v_source;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
@@ -2224,18 +2224,18 @@ static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_23acos(PyObject *__pyx_sel
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
-  __Pyx_AddTraceback("agrow.math.func.wrapped.acos", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("agrow.math.func.func.acos", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_5agrow_4math_4func_7wrapped_22acos(__pyx_self, ((double)__pyx_v_source));
+  __pyx_r = __pyx_pf_5agrow_4math_4func_4func_22acos(__pyx_self, ((double)__pyx_v_source));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_22acos(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source) {
+static PyObject *__pyx_pf_5agrow_4math_4func_4func_22acos(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2244,7 +2244,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_22acos(CYTHON_UNUSED PyObj
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("acos", 0);
 
-  /* "agrow/math/func/wrapped.pyx":73
+  /* "agrow/math/func/func.pyx":73
  * 
  * def acos(double source):
  *     return ag_acos(source)             # <<<<<<<<<<<<<<
@@ -2258,7 +2258,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_22acos(CYTHON_UNUSED PyObj
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "agrow/math/func/wrapped.pyx":72
+  /* "agrow/math/func/func.pyx":72
  * 
  * 
  * def acos(double source):             # <<<<<<<<<<<<<<
@@ -2269,7 +2269,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_22acos(CYTHON_UNUSED PyObj
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("agrow.math.func.wrapped.acos", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("agrow.math.func.func.acos", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2277,7 +2277,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_22acos(CYTHON_UNUSED PyObj
   return __pyx_r;
 }
 
-/* "agrow/math/func/wrapped.pyx":76
+/* "agrow/math/func/func.pyx":76
  * 
  * 
  * def atan(double source):             # <<<<<<<<<<<<<<
@@ -2286,9 +2286,9 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_22acos(CYTHON_UNUSED PyObj
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_25atan(PyObject *__pyx_self, PyObject *__pyx_arg_source); /*proto*/
-static PyMethodDef __pyx_mdef_5agrow_4math_4func_7wrapped_25atan = {"atan", (PyCFunction)__pyx_pw_5agrow_4math_4func_7wrapped_25atan, METH_O, 0};
-static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_25atan(PyObject *__pyx_self, PyObject *__pyx_arg_source) {
+static PyObject *__pyx_pw_5agrow_4math_4func_4func_25atan(PyObject *__pyx_self, PyObject *__pyx_arg_source); /*proto*/
+static PyMethodDef __pyx_mdef_5agrow_4math_4func_4func_25atan = {"atan", (PyCFunction)__pyx_pw_5agrow_4math_4func_4func_25atan, METH_O, 0};
+static PyObject *__pyx_pw_5agrow_4math_4func_4func_25atan(PyObject *__pyx_self, PyObject *__pyx_arg_source) {
   double __pyx_v_source;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
@@ -2301,18 +2301,18 @@ static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_25atan(PyObject *__pyx_sel
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
-  __Pyx_AddTraceback("agrow.math.func.wrapped.atan", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("agrow.math.func.func.atan", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_5agrow_4math_4func_7wrapped_24atan(__pyx_self, ((double)__pyx_v_source));
+  __pyx_r = __pyx_pf_5agrow_4math_4func_4func_24atan(__pyx_self, ((double)__pyx_v_source));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_24atan(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source) {
+static PyObject *__pyx_pf_5agrow_4math_4func_4func_24atan(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2321,7 +2321,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_24atan(CYTHON_UNUSED PyObj
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("atan", 0);
 
-  /* "agrow/math/func/wrapped.pyx":77
+  /* "agrow/math/func/func.pyx":77
  * 
  * def atan(double source):
  *     return ag_atan(source)             # <<<<<<<<<<<<<<
@@ -2335,7 +2335,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_24atan(CYTHON_UNUSED PyObj
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "agrow/math/func/wrapped.pyx":76
+  /* "agrow/math/func/func.pyx":76
  * 
  * 
  * def atan(double source):             # <<<<<<<<<<<<<<
@@ -2346,7 +2346,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_24atan(CYTHON_UNUSED PyObj
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("agrow.math.func.wrapped.atan", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("agrow.math.func.func.atan", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2354,7 +2354,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_24atan(CYTHON_UNUSED PyObj
   return __pyx_r;
 }
 
-/* "agrow/math/func/wrapped.pyx":80
+/* "agrow/math/func/func.pyx":80
  * 
  * 
  * def sin(double source):             # <<<<<<<<<<<<<<
@@ -2363,9 +2363,9 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_24atan(CYTHON_UNUSED PyObj
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_27sin(PyObject *__pyx_self, PyObject *__pyx_arg_source); /*proto*/
-static PyMethodDef __pyx_mdef_5agrow_4math_4func_7wrapped_27sin = {"sin", (PyCFunction)__pyx_pw_5agrow_4math_4func_7wrapped_27sin, METH_O, 0};
-static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_27sin(PyObject *__pyx_self, PyObject *__pyx_arg_source) {
+static PyObject *__pyx_pw_5agrow_4math_4func_4func_27sin(PyObject *__pyx_self, PyObject *__pyx_arg_source); /*proto*/
+static PyMethodDef __pyx_mdef_5agrow_4math_4func_4func_27sin = {"sin", (PyCFunction)__pyx_pw_5agrow_4math_4func_4func_27sin, METH_O, 0};
+static PyObject *__pyx_pw_5agrow_4math_4func_4func_27sin(PyObject *__pyx_self, PyObject *__pyx_arg_source) {
   double __pyx_v_source;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
@@ -2378,18 +2378,18 @@ static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_27sin(PyObject *__pyx_self
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
-  __Pyx_AddTraceback("agrow.math.func.wrapped.sin", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("agrow.math.func.func.sin", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_5agrow_4math_4func_7wrapped_26sin(__pyx_self, ((double)__pyx_v_source));
+  __pyx_r = __pyx_pf_5agrow_4math_4func_4func_26sin(__pyx_self, ((double)__pyx_v_source));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_26sin(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source) {
+static PyObject *__pyx_pf_5agrow_4math_4func_4func_26sin(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2398,7 +2398,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_26sin(CYTHON_UNUSED PyObje
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("sin", 0);
 
-  /* "agrow/math/func/wrapped.pyx":81
+  /* "agrow/math/func/func.pyx":81
  * 
  * def sin(double source):
  *     return ag_sin(source)             # <<<<<<<<<<<<<<
@@ -2412,7 +2412,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_26sin(CYTHON_UNUSED PyObje
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "agrow/math/func/wrapped.pyx":80
+  /* "agrow/math/func/func.pyx":80
  * 
  * 
  * def sin(double source):             # <<<<<<<<<<<<<<
@@ -2423,7 +2423,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_26sin(CYTHON_UNUSED PyObje
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("agrow.math.func.wrapped.sin", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("agrow.math.func.func.sin", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2431,7 +2431,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_26sin(CYTHON_UNUSED PyObje
   return __pyx_r;
 }
 
-/* "agrow/math/func/wrapped.pyx":84
+/* "agrow/math/func/func.pyx":84
  * 
  * 
  * def cos(double source):             # <<<<<<<<<<<<<<
@@ -2440,9 +2440,9 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_26sin(CYTHON_UNUSED PyObje
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_29cos(PyObject *__pyx_self, PyObject *__pyx_arg_source); /*proto*/
-static PyMethodDef __pyx_mdef_5agrow_4math_4func_7wrapped_29cos = {"cos", (PyCFunction)__pyx_pw_5agrow_4math_4func_7wrapped_29cos, METH_O, 0};
-static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_29cos(PyObject *__pyx_self, PyObject *__pyx_arg_source) {
+static PyObject *__pyx_pw_5agrow_4math_4func_4func_29cos(PyObject *__pyx_self, PyObject *__pyx_arg_source); /*proto*/
+static PyMethodDef __pyx_mdef_5agrow_4math_4func_4func_29cos = {"cos", (PyCFunction)__pyx_pw_5agrow_4math_4func_4func_29cos, METH_O, 0};
+static PyObject *__pyx_pw_5agrow_4math_4func_4func_29cos(PyObject *__pyx_self, PyObject *__pyx_arg_source) {
   double __pyx_v_source;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
@@ -2455,18 +2455,18 @@ static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_29cos(PyObject *__pyx_self
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
-  __Pyx_AddTraceback("agrow.math.func.wrapped.cos", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("agrow.math.func.func.cos", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_5agrow_4math_4func_7wrapped_28cos(__pyx_self, ((double)__pyx_v_source));
+  __pyx_r = __pyx_pf_5agrow_4math_4func_4func_28cos(__pyx_self, ((double)__pyx_v_source));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_28cos(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source) {
+static PyObject *__pyx_pf_5agrow_4math_4func_4func_28cos(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2475,7 +2475,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_28cos(CYTHON_UNUSED PyObje
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("cos", 0);
 
-  /* "agrow/math/func/wrapped.pyx":85
+  /* "agrow/math/func/func.pyx":85
  * 
  * def cos(double source):
  *     return ag_cos(source)             # <<<<<<<<<<<<<<
@@ -2489,7 +2489,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_28cos(CYTHON_UNUSED PyObje
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "agrow/math/func/wrapped.pyx":84
+  /* "agrow/math/func/func.pyx":84
  * 
  * 
  * def cos(double source):             # <<<<<<<<<<<<<<
@@ -2500,7 +2500,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_28cos(CYTHON_UNUSED PyObje
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("agrow.math.func.wrapped.cos", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("agrow.math.func.func.cos", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2508,7 +2508,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_28cos(CYTHON_UNUSED PyObje
   return __pyx_r;
 }
 
-/* "agrow/math/func/wrapped.pyx":88
+/* "agrow/math/func/func.pyx":88
  * 
  * 
  * def tan(double source):             # <<<<<<<<<<<<<<
@@ -2516,9 +2516,9 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_28cos(CYTHON_UNUSED PyObje
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_31tan(PyObject *__pyx_self, PyObject *__pyx_arg_source); /*proto*/
-static PyMethodDef __pyx_mdef_5agrow_4math_4func_7wrapped_31tan = {"tan", (PyCFunction)__pyx_pw_5agrow_4math_4func_7wrapped_31tan, METH_O, 0};
-static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_31tan(PyObject *__pyx_self, PyObject *__pyx_arg_source) {
+static PyObject *__pyx_pw_5agrow_4math_4func_4func_31tan(PyObject *__pyx_self, PyObject *__pyx_arg_source); /*proto*/
+static PyMethodDef __pyx_mdef_5agrow_4math_4func_4func_31tan = {"tan", (PyCFunction)__pyx_pw_5agrow_4math_4func_4func_31tan, METH_O, 0};
+static PyObject *__pyx_pw_5agrow_4math_4func_4func_31tan(PyObject *__pyx_self, PyObject *__pyx_arg_source) {
   double __pyx_v_source;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
@@ -2531,18 +2531,18 @@ static PyObject *__pyx_pw_5agrow_4math_4func_7wrapped_31tan(PyObject *__pyx_self
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
-  __Pyx_AddTraceback("agrow.math.func.wrapped.tan", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("agrow.math.func.func.tan", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_5agrow_4math_4func_7wrapped_30tan(__pyx_self, ((double)__pyx_v_source));
+  __pyx_r = __pyx_pf_5agrow_4math_4func_4func_30tan(__pyx_self, ((double)__pyx_v_source));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_30tan(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source) {
+static PyObject *__pyx_pf_5agrow_4math_4func_4func_30tan(CYTHON_UNUSED PyObject *__pyx_self, double __pyx_v_source) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2551,7 +2551,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_30tan(CYTHON_UNUSED PyObje
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("tan", 0);
 
-  /* "agrow/math/func/wrapped.pyx":89
+  /* "agrow/math/func/func.pyx":89
  * 
  * def tan(double source):
  *     return ag_tan(source)             # <<<<<<<<<<<<<<
@@ -2563,7 +2563,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_30tan(CYTHON_UNUSED PyObje
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "agrow/math/func/wrapped.pyx":88
+  /* "agrow/math/func/func.pyx":88
  * 
  * 
  * def tan(double source):             # <<<<<<<<<<<<<<
@@ -2573,7 +2573,7 @@ static PyObject *__pyx_pf_5agrow_4math_4func_7wrapped_30tan(CYTHON_UNUSED PyObje
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("agrow.math.func.wrapped.tan", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("agrow.math.func.func.tan", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2588,17 +2588,17 @@ static PyMethodDef __pyx_methods[] = {
 #if PY_MAJOR_VERSION >= 3
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 static PyObject* __pyx_pymod_create(PyObject *spec, PyModuleDef *def); /*proto*/
-static int __pyx_pymod_exec_wrapped(PyObject* module); /*proto*/
+static int __pyx_pymod_exec_func(PyObject* module); /*proto*/
 static PyModuleDef_Slot __pyx_moduledef_slots[] = {
   {Py_mod_create, (void*)__pyx_pymod_create},
-  {Py_mod_exec, (void*)__pyx_pymod_exec_wrapped},
+  {Py_mod_exec, (void*)__pyx_pymod_exec_func},
   {0, NULL}
 };
 #endif
 
 static struct PyModuleDef __pyx_moduledef = {
     PyModuleDef_HEAD_INIT,
-    "wrapped",
+    "func",
     0, /* m_doc */
   #if CYTHON_PEP489_MULTI_PHASE_INIT
     0, /* m_size */
@@ -2629,8 +2629,8 @@ static struct PyModuleDef __pyx_moduledef = {
 static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_abs, __pyx_k_abs, sizeof(__pyx_k_abs), 0, 0, 1, 1},
   {&__pyx_n_s_acos, __pyx_k_acos, sizeof(__pyx_k_acos), 0, 0, 1, 1},
-  {&__pyx_n_s_agrow_math_func_wrapped, __pyx_k_agrow_math_func_wrapped, sizeof(__pyx_k_agrow_math_func_wrapped), 0, 0, 1, 1},
-  {&__pyx_kp_s_agrow_math_func_wrapped_pyx, __pyx_k_agrow_math_func_wrapped_pyx, sizeof(__pyx_k_agrow_math_func_wrapped_pyx), 0, 0, 1, 0},
+  {&__pyx_n_s_agrow_math_func_func, __pyx_k_agrow_math_func_func, sizeof(__pyx_k_agrow_math_func_func), 0, 0, 1, 1},
+  {&__pyx_kp_s_agrow_math_func_func_pyx, __pyx_k_agrow_math_func_func_pyx, sizeof(__pyx_k_agrow_math_func_func_pyx), 0, 0, 1, 0},
   {&__pyx_n_s_asin, __pyx_k_asin, sizeof(__pyx_k_asin), 0, 0, 1, 1},
   {&__pyx_n_s_atan, __pyx_k_atan, sizeof(__pyx_k_atan), 0, 0, 1, 1},
   {&__pyx_n_s_base, __pyx_k_base, sizeof(__pyx_k_base), 0, 0, 1, 1},
@@ -2663,7 +2663,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "agrow/math/func/wrapped.pyx":28
+  /* "agrow/math/func/func.pyx":28
  * 
  * 
  * def is_zero(double source):             # <<<<<<<<<<<<<<
@@ -2673,9 +2673,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple_ = PyTuple_Pack(2, __pyx_n_s_source, __pyx_n_s_source); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 28, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
-  __pyx_codeobj__2 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple_, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_agrow_math_func_wrapped_pyx, __pyx_n_s_is_zero, 28, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__2)) __PYX_ERR(0, 28, __pyx_L1_error)
+  __pyx_codeobj__2 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple_, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_agrow_math_func_func_pyx, __pyx_n_s_is_zero, 28, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__2)) __PYX_ERR(0, 28, __pyx_L1_error)
 
-  /* "agrow/math/func/wrapped.pyx":32
+  /* "agrow/math/func/func.pyx":32
  * 
  * 
  * def abs(long int source):             # <<<<<<<<<<<<<<
@@ -2685,9 +2685,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__3 = PyTuple_Pack(2, __pyx_n_s_source, __pyx_n_s_source); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 32, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
-  __pyx_codeobj__4 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__3, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_agrow_math_func_wrapped_pyx, __pyx_n_s_abs, 32, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__4)) __PYX_ERR(0, 32, __pyx_L1_error)
+  __pyx_codeobj__4 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__3, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_agrow_math_func_func_pyx, __pyx_n_s_abs, 32, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__4)) __PYX_ERR(0, 32, __pyx_L1_error)
 
-  /* "agrow/math/func/wrapped.pyx":36
+  /* "agrow/math/func/func.pyx":36
  * 
  * 
  * def fabs(double source):             # <<<<<<<<<<<<<<
@@ -2697,9 +2697,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__5 = PyTuple_Pack(2, __pyx_n_s_source, __pyx_n_s_source); if (unlikely(!__pyx_tuple__5)) __PYX_ERR(0, 36, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__5);
   __Pyx_GIVEREF(__pyx_tuple__5);
-  __pyx_codeobj__6 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__5, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_agrow_math_func_wrapped_pyx, __pyx_n_s_fabs, 36, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__6)) __PYX_ERR(0, 36, __pyx_L1_error)
+  __pyx_codeobj__6 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__5, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_agrow_math_func_func_pyx, __pyx_n_s_fabs, 36, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__6)) __PYX_ERR(0, 36, __pyx_L1_error)
 
-  /* "agrow/math/func/wrapped.pyx":40
+  /* "agrow/math/func/func.pyx":40
  * 
  * 
  * def ceil(double source):             # <<<<<<<<<<<<<<
@@ -2709,9 +2709,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__7 = PyTuple_Pack(2, __pyx_n_s_source, __pyx_n_s_source); if (unlikely(!__pyx_tuple__7)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__7);
   __Pyx_GIVEREF(__pyx_tuple__7);
-  __pyx_codeobj__8 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__7, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_agrow_math_func_wrapped_pyx, __pyx_n_s_ceil, 40, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__8)) __PYX_ERR(0, 40, __pyx_L1_error)
+  __pyx_codeobj__8 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__7, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_agrow_math_func_func_pyx, __pyx_n_s_ceil, 40, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__8)) __PYX_ERR(0, 40, __pyx_L1_error)
 
-  /* "agrow/math/func/wrapped.pyx":44
+  /* "agrow/math/func/func.pyx":44
  * 
  * 
  * def floor(double source):             # <<<<<<<<<<<<<<
@@ -2721,9 +2721,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__9 = PyTuple_Pack(2, __pyx_n_s_source, __pyx_n_s_source); if (unlikely(!__pyx_tuple__9)) __PYX_ERR(0, 44, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__9);
   __Pyx_GIVEREF(__pyx_tuple__9);
-  __pyx_codeobj__10 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__9, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_agrow_math_func_wrapped_pyx, __pyx_n_s_floor, 44, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__10)) __PYX_ERR(0, 44, __pyx_L1_error)
+  __pyx_codeobj__10 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__9, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_agrow_math_func_func_pyx, __pyx_n_s_floor, 44, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__10)) __PYX_ERR(0, 44, __pyx_L1_error)
 
-  /* "agrow/math/func/wrapped.pyx":48
+  /* "agrow/math/func/func.pyx":48
  * 
  * 
  * def fmod(double x, double y):             # <<<<<<<<<<<<<<
@@ -2733,9 +2733,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__11 = PyTuple_Pack(2, __pyx_n_s_x, __pyx_n_s_y); if (unlikely(!__pyx_tuple__11)) __PYX_ERR(0, 48, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__11);
   __Pyx_GIVEREF(__pyx_tuple__11);
-  __pyx_codeobj__12 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__11, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_agrow_math_func_wrapped_pyx, __pyx_n_s_fmod, 48, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__12)) __PYX_ERR(0, 48, __pyx_L1_error)
+  __pyx_codeobj__12 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__11, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_agrow_math_func_func_pyx, __pyx_n_s_fmod, 48, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__12)) __PYX_ERR(0, 48, __pyx_L1_error)
 
-  /* "agrow/math/func/wrapped.pyx":52
+  /* "agrow/math/func/func.pyx":52
  * 
  * 
  * def sqrt(double source):             # <<<<<<<<<<<<<<
@@ -2745,9 +2745,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__13 = PyTuple_Pack(2, __pyx_n_s_source, __pyx_n_s_source); if (unlikely(!__pyx_tuple__13)) __PYX_ERR(0, 52, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__13);
   __Pyx_GIVEREF(__pyx_tuple__13);
-  __pyx_codeobj__14 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__13, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_agrow_math_func_wrapped_pyx, __pyx_n_s_sqrt, 52, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__14)) __PYX_ERR(0, 52, __pyx_L1_error)
+  __pyx_codeobj__14 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__13, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_agrow_math_func_func_pyx, __pyx_n_s_sqrt, 52, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__14)) __PYX_ERR(0, 52, __pyx_L1_error)
 
-  /* "agrow/math/func/wrapped.pyx":56
+  /* "agrow/math/func/func.pyx":56
  * 
  * 
  * def exp(double source):             # <<<<<<<<<<<<<<
@@ -2757,9 +2757,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__15 = PyTuple_Pack(2, __pyx_n_s_source, __pyx_n_s_source); if (unlikely(!__pyx_tuple__15)) __PYX_ERR(0, 56, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__15);
   __Pyx_GIVEREF(__pyx_tuple__15);
-  __pyx_codeobj__16 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__15, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_agrow_math_func_wrapped_pyx, __pyx_n_s_exp, 56, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__16)) __PYX_ERR(0, 56, __pyx_L1_error)
+  __pyx_codeobj__16 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__15, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_agrow_math_func_func_pyx, __pyx_n_s_exp, 56, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__16)) __PYX_ERR(0, 56, __pyx_L1_error)
 
-  /* "agrow/math/func/wrapped.pyx":60
+  /* "agrow/math/func/func.pyx":60
  * 
  * 
  * def log(double source):             # <<<<<<<<<<<<<<
@@ -2769,9 +2769,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__17 = PyTuple_Pack(2, __pyx_n_s_source, __pyx_n_s_source); if (unlikely(!__pyx_tuple__17)) __PYX_ERR(0, 60, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__17);
   __Pyx_GIVEREF(__pyx_tuple__17);
-  __pyx_codeobj__18 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__17, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_agrow_math_func_wrapped_pyx, __pyx_n_s_log, 60, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__18)) __PYX_ERR(0, 60, __pyx_L1_error)
+  __pyx_codeobj__18 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__17, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_agrow_math_func_func_pyx, __pyx_n_s_log, 60, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__18)) __PYX_ERR(0, 60, __pyx_L1_error)
 
-  /* "agrow/math/func/wrapped.pyx":64
+  /* "agrow/math/func/func.pyx":64
  * 
  * 
  * def pow(double base, double exp):             # <<<<<<<<<<<<<<
@@ -2781,9 +2781,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__19 = PyTuple_Pack(2, __pyx_n_s_base, __pyx_n_s_exp); if (unlikely(!__pyx_tuple__19)) __PYX_ERR(0, 64, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__19);
   __Pyx_GIVEREF(__pyx_tuple__19);
-  __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__19, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_agrow_math_func_wrapped_pyx, __pyx_n_s_pow, 64, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) __PYX_ERR(0, 64, __pyx_L1_error)
+  __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__19, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_agrow_math_func_func_pyx, __pyx_n_s_pow, 64, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) __PYX_ERR(0, 64, __pyx_L1_error)
 
-  /* "agrow/math/func/wrapped.pyx":68
+  /* "agrow/math/func/func.pyx":68
  * 
  * 
  * def asin(double source):             # <<<<<<<<<<<<<<
@@ -2793,9 +2793,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__21 = PyTuple_Pack(2, __pyx_n_s_source, __pyx_n_s_source); if (unlikely(!__pyx_tuple__21)) __PYX_ERR(0, 68, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__21);
   __Pyx_GIVEREF(__pyx_tuple__21);
-  __pyx_codeobj__22 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__21, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_agrow_math_func_wrapped_pyx, __pyx_n_s_asin, 68, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__22)) __PYX_ERR(0, 68, __pyx_L1_error)
+  __pyx_codeobj__22 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__21, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_agrow_math_func_func_pyx, __pyx_n_s_asin, 68, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__22)) __PYX_ERR(0, 68, __pyx_L1_error)
 
-  /* "agrow/math/func/wrapped.pyx":72
+  /* "agrow/math/func/func.pyx":72
  * 
  * 
  * def acos(double source):             # <<<<<<<<<<<<<<
@@ -2805,9 +2805,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__23 = PyTuple_Pack(2, __pyx_n_s_source, __pyx_n_s_source); if (unlikely(!__pyx_tuple__23)) __PYX_ERR(0, 72, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__23);
   __Pyx_GIVEREF(__pyx_tuple__23);
-  __pyx_codeobj__24 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__23, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_agrow_math_func_wrapped_pyx, __pyx_n_s_acos, 72, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__24)) __PYX_ERR(0, 72, __pyx_L1_error)
+  __pyx_codeobj__24 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__23, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_agrow_math_func_func_pyx, __pyx_n_s_acos, 72, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__24)) __PYX_ERR(0, 72, __pyx_L1_error)
 
-  /* "agrow/math/func/wrapped.pyx":76
+  /* "agrow/math/func/func.pyx":76
  * 
  * 
  * def atan(double source):             # <<<<<<<<<<<<<<
@@ -2817,9 +2817,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__25 = PyTuple_Pack(2, __pyx_n_s_source, __pyx_n_s_source); if (unlikely(!__pyx_tuple__25)) __PYX_ERR(0, 76, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__25);
   __Pyx_GIVEREF(__pyx_tuple__25);
-  __pyx_codeobj__26 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__25, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_agrow_math_func_wrapped_pyx, __pyx_n_s_atan, 76, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__26)) __PYX_ERR(0, 76, __pyx_L1_error)
+  __pyx_codeobj__26 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__25, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_agrow_math_func_func_pyx, __pyx_n_s_atan, 76, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__26)) __PYX_ERR(0, 76, __pyx_L1_error)
 
-  /* "agrow/math/func/wrapped.pyx":80
+  /* "agrow/math/func/func.pyx":80
  * 
  * 
  * def sin(double source):             # <<<<<<<<<<<<<<
@@ -2829,9 +2829,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__27 = PyTuple_Pack(2, __pyx_n_s_source, __pyx_n_s_source); if (unlikely(!__pyx_tuple__27)) __PYX_ERR(0, 80, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__27);
   __Pyx_GIVEREF(__pyx_tuple__27);
-  __pyx_codeobj__28 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__27, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_agrow_math_func_wrapped_pyx, __pyx_n_s_sin, 80, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__28)) __PYX_ERR(0, 80, __pyx_L1_error)
+  __pyx_codeobj__28 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__27, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_agrow_math_func_func_pyx, __pyx_n_s_sin, 80, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__28)) __PYX_ERR(0, 80, __pyx_L1_error)
 
-  /* "agrow/math/func/wrapped.pyx":84
+  /* "agrow/math/func/func.pyx":84
  * 
  * 
  * def cos(double source):             # <<<<<<<<<<<<<<
@@ -2841,9 +2841,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__29 = PyTuple_Pack(2, __pyx_n_s_source, __pyx_n_s_source); if (unlikely(!__pyx_tuple__29)) __PYX_ERR(0, 84, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__29);
   __Pyx_GIVEREF(__pyx_tuple__29);
-  __pyx_codeobj__30 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_agrow_math_func_wrapped_pyx, __pyx_n_s_cos, 84, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__30)) __PYX_ERR(0, 84, __pyx_L1_error)
+  __pyx_codeobj__30 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_agrow_math_func_func_pyx, __pyx_n_s_cos, 84, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__30)) __PYX_ERR(0, 84, __pyx_L1_error)
 
-  /* "agrow/math/func/wrapped.pyx":88
+  /* "agrow/math/func/func.pyx":88
  * 
  * 
  * def tan(double source):             # <<<<<<<<<<<<<<
@@ -2852,7 +2852,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__31 = PyTuple_Pack(2, __pyx_n_s_source, __pyx_n_s_source); if (unlikely(!__pyx_tuple__31)) __PYX_ERR(0, 88, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__31);
   __Pyx_GIVEREF(__pyx_tuple__31);
-  __pyx_codeobj__32 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__31, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_agrow_math_func_wrapped_pyx, __pyx_n_s_tan, 88, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__32)) __PYX_ERR(0, 88, __pyx_L1_error)
+  __pyx_codeobj__32 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__31, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_agrow_math_func_func_pyx, __pyx_n_s_tan, 88, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__32)) __PYX_ERR(0, 88, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -2950,11 +2950,11 @@ static int __Pyx_modinit_function_import_code(void) {
 
 
 #if PY_MAJOR_VERSION < 3
-__Pyx_PyMODINIT_FUNC initwrapped(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC initwrapped(void)
+__Pyx_PyMODINIT_FUNC initfunc(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC initfunc(void)
 #else
-__Pyx_PyMODINIT_FUNC PyInit_wrapped(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC PyInit_wrapped(void)
+__Pyx_PyMODINIT_FUNC PyInit_func(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC PyInit_func(void)
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 {
   return PyModuleDef_Init(&__pyx_moduledef);
@@ -3021,7 +3021,7 @@ bad:
 }
 
 
-static CYTHON_SMALL_CODE int __pyx_pymod_exec_wrapped(PyObject *__pyx_pyinit_module)
+static CYTHON_SMALL_CODE int __pyx_pymod_exec_func(PyObject *__pyx_pyinit_module)
 #endif
 #endif
 {
@@ -3033,7 +3033,7 @@ static CYTHON_SMALL_CODE int __pyx_pymod_exec_wrapped(PyObject *__pyx_pyinit_mod
   #if CYTHON_PEP489_MULTI_PHASE_INIT
   if (__pyx_m) {
     if (__pyx_m == __pyx_pyinit_module) return 0;
-    PyErr_SetString(PyExc_RuntimeError, "Module 'wrapped' has already been imported. Re-initialisation is not supported.");
+    PyErr_SetString(PyExc_RuntimeError, "Module 'func' has already been imported. Re-initialisation is not supported.");
     return -1;
   }
   #elif PY_MAJOR_VERSION >= 3
@@ -3048,7 +3048,7 @@ if (!__Pyx_RefNanny) {
       Py_FatalError("failed to import 'refnanny' module");
 }
 #endif
-  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_wrapped(void)", 0);
+  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_func(void)", 0);
   if (__Pyx_check_binary_version() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #ifdef __Pxy_PyFrame_Initialize_Offsets
   __Pxy_PyFrame_Initialize_Offsets();
@@ -3085,7 +3085,7 @@ if (!__Pyx_RefNanny) {
   Py_INCREF(__pyx_m);
   #else
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("wrapped", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("func", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -3103,14 +3103,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_agrow__math__func__wrapped) {
+  if (__pyx_module_is_main_agrow__math__func__func) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name, __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "agrow.math.func.wrapped")) {
-      if (unlikely(PyDict_SetItemString(modules, "agrow.math.func.wrapped", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "agrow.math.func.func")) {
+      if (unlikely(PyDict_SetItemString(modules, "agrow.math.func.func", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -3131,198 +3131,198 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "agrow/math/func/wrapped.pyx":28
+  /* "agrow/math/func/func.pyx":28
  * 
  * 
  * def is_zero(double source):             # <<<<<<<<<<<<<<
  *     return ag_is_zero(source)
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5agrow_4math_4func_7wrapped_1is_zero, NULL, __pyx_n_s_agrow_math_func_wrapped); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 28, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5agrow_4math_4func_4func_1is_zero, NULL, __pyx_n_s_agrow_math_func_func); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 28, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_is_zero, __pyx_t_1) < 0) __PYX_ERR(0, 28, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "agrow/math/func/wrapped.pyx":32
+  /* "agrow/math/func/func.pyx":32
  * 
  * 
  * def abs(long int source):             # <<<<<<<<<<<<<<
  *     return ag_abs(source)
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5agrow_4math_4func_7wrapped_3abs, NULL, __pyx_n_s_agrow_math_func_wrapped); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 32, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5agrow_4math_4func_4func_3abs, NULL, __pyx_n_s_agrow_math_func_func); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 32, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_abs, __pyx_t_1) < 0) __PYX_ERR(0, 32, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "agrow/math/func/wrapped.pyx":36
+  /* "agrow/math/func/func.pyx":36
  * 
  * 
  * def fabs(double source):             # <<<<<<<<<<<<<<
  *     return ag_fabs(source)
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5agrow_4math_4func_7wrapped_5fabs, NULL, __pyx_n_s_agrow_math_func_wrapped); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 36, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5agrow_4math_4func_4func_5fabs, NULL, __pyx_n_s_agrow_math_func_func); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 36, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_fabs, __pyx_t_1) < 0) __PYX_ERR(0, 36, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "agrow/math/func/wrapped.pyx":40
+  /* "agrow/math/func/func.pyx":40
  * 
  * 
  * def ceil(double source):             # <<<<<<<<<<<<<<
  *     return ag_ceil(source)
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5agrow_4math_4func_7wrapped_7ceil, NULL, __pyx_n_s_agrow_math_func_wrapped); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 40, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5agrow_4math_4func_4func_7ceil, NULL, __pyx_n_s_agrow_math_func_func); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_ceil, __pyx_t_1) < 0) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "agrow/math/func/wrapped.pyx":44
+  /* "agrow/math/func/func.pyx":44
  * 
  * 
  * def floor(double source):             # <<<<<<<<<<<<<<
  *     return ag_floor(source)
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5agrow_4math_4func_7wrapped_9floor, NULL, __pyx_n_s_agrow_math_func_wrapped); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 44, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5agrow_4math_4func_4func_9floor, NULL, __pyx_n_s_agrow_math_func_func); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 44, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_floor, __pyx_t_1) < 0) __PYX_ERR(0, 44, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "agrow/math/func/wrapped.pyx":48
+  /* "agrow/math/func/func.pyx":48
  * 
  * 
  * def fmod(double x, double y):             # <<<<<<<<<<<<<<
  *     return ag_fmod(x, y)
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5agrow_4math_4func_7wrapped_11fmod, NULL, __pyx_n_s_agrow_math_func_wrapped); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 48, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5agrow_4math_4func_4func_11fmod, NULL, __pyx_n_s_agrow_math_func_func); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 48, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_fmod, __pyx_t_1) < 0) __PYX_ERR(0, 48, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "agrow/math/func/wrapped.pyx":52
+  /* "agrow/math/func/func.pyx":52
  * 
  * 
  * def sqrt(double source):             # <<<<<<<<<<<<<<
  *     return ag_sqrt(source)
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5agrow_4math_4func_7wrapped_13sqrt, NULL, __pyx_n_s_agrow_math_func_wrapped); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 52, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5agrow_4math_4func_4func_13sqrt, NULL, __pyx_n_s_agrow_math_func_func); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 52, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_sqrt, __pyx_t_1) < 0) __PYX_ERR(0, 52, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "agrow/math/func/wrapped.pyx":56
+  /* "agrow/math/func/func.pyx":56
  * 
  * 
  * def exp(double source):             # <<<<<<<<<<<<<<
  *     return ag_exp(source)
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5agrow_4math_4func_7wrapped_15exp, NULL, __pyx_n_s_agrow_math_func_wrapped); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 56, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5agrow_4math_4func_4func_15exp, NULL, __pyx_n_s_agrow_math_func_func); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 56, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_exp, __pyx_t_1) < 0) __PYX_ERR(0, 56, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "agrow/math/func/wrapped.pyx":60
+  /* "agrow/math/func/func.pyx":60
  * 
  * 
  * def log(double source):             # <<<<<<<<<<<<<<
  *     return ag_log(source)
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5agrow_4math_4func_7wrapped_17log, NULL, __pyx_n_s_agrow_math_func_wrapped); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 60, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5agrow_4math_4func_4func_17log, NULL, __pyx_n_s_agrow_math_func_func); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 60, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_log, __pyx_t_1) < 0) __PYX_ERR(0, 60, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "agrow/math/func/wrapped.pyx":64
+  /* "agrow/math/func/func.pyx":64
  * 
  * 
  * def pow(double base, double exp):             # <<<<<<<<<<<<<<
  *     return ag_pow(base, exp)
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5agrow_4math_4func_7wrapped_19pow, NULL, __pyx_n_s_agrow_math_func_wrapped); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 64, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5agrow_4math_4func_4func_19pow, NULL, __pyx_n_s_agrow_math_func_func); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 64, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_pow, __pyx_t_1) < 0) __PYX_ERR(0, 64, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "agrow/math/func/wrapped.pyx":68
+  /* "agrow/math/func/func.pyx":68
  * 
  * 
  * def asin(double source):             # <<<<<<<<<<<<<<
  *     return ag_asin(source)
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5agrow_4math_4func_7wrapped_21asin, NULL, __pyx_n_s_agrow_math_func_wrapped); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 68, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5agrow_4math_4func_4func_21asin, NULL, __pyx_n_s_agrow_math_func_func); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 68, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_asin, __pyx_t_1) < 0) __PYX_ERR(0, 68, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "agrow/math/func/wrapped.pyx":72
+  /* "agrow/math/func/func.pyx":72
  * 
  * 
  * def acos(double source):             # <<<<<<<<<<<<<<
  *     return ag_acos(source)
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5agrow_4math_4func_7wrapped_23acos, NULL, __pyx_n_s_agrow_math_func_wrapped); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 72, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5agrow_4math_4func_4func_23acos, NULL, __pyx_n_s_agrow_math_func_func); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 72, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_acos, __pyx_t_1) < 0) __PYX_ERR(0, 72, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "agrow/math/func/wrapped.pyx":76
+  /* "agrow/math/func/func.pyx":76
  * 
  * 
  * def atan(double source):             # <<<<<<<<<<<<<<
  *     return ag_atan(source)
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5agrow_4math_4func_7wrapped_25atan, NULL, __pyx_n_s_agrow_math_func_wrapped); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 76, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5agrow_4math_4func_4func_25atan, NULL, __pyx_n_s_agrow_math_func_func); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 76, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_atan, __pyx_t_1) < 0) __PYX_ERR(0, 76, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "agrow/math/func/wrapped.pyx":80
+  /* "agrow/math/func/func.pyx":80
  * 
  * 
  * def sin(double source):             # <<<<<<<<<<<<<<
  *     return ag_sin(source)
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5agrow_4math_4func_7wrapped_27sin, NULL, __pyx_n_s_agrow_math_func_wrapped); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 80, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5agrow_4math_4func_4func_27sin, NULL, __pyx_n_s_agrow_math_func_func); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 80, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_sin, __pyx_t_1) < 0) __PYX_ERR(0, 80, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "agrow/math/func/wrapped.pyx":84
+  /* "agrow/math/func/func.pyx":84
  * 
  * 
  * def cos(double source):             # <<<<<<<<<<<<<<
  *     return ag_cos(source)
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5agrow_4math_4func_7wrapped_29cos, NULL, __pyx_n_s_agrow_math_func_wrapped); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 84, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5agrow_4math_4func_4func_29cos, NULL, __pyx_n_s_agrow_math_func_func); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 84, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_cos, __pyx_t_1) < 0) __PYX_ERR(0, 84, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "agrow/math/func/wrapped.pyx":88
+  /* "agrow/math/func/func.pyx":88
  * 
  * 
  * def tan(double source):             # <<<<<<<<<<<<<<
  *     return ag_tan(source)
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5agrow_4math_4func_7wrapped_31tan, NULL, __pyx_n_s_agrow_math_func_wrapped); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 88, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5agrow_4math_4func_4func_31tan, NULL, __pyx_n_s_agrow_math_func_func); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 88, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_tan, __pyx_t_1) < 0) __PYX_ERR(0, 88, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "agrow/math/func/wrapped.pyx":1
+  /* "agrow/math/func/func.pyx":1
  * from libcpp cimport bool             # <<<<<<<<<<<<<<
  * 
  * 
@@ -3339,11 +3339,11 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_1);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init agrow.math.func.wrapped", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init agrow.math.func.func", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_CLEAR(__pyx_m);
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init agrow.math.func.wrapped");
+    PyErr_SetString(PyExc_ImportError, "init agrow.math.func.func");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
