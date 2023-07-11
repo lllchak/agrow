@@ -1,3 +1,6 @@
+#ifndef __FUNC_CORE_FUNC_H__
+#define __FUNC_CORE_FUNC_H__
+
 #include <ctype.h>
 #include <stdint.h>
 #include <stdbool.h>
@@ -123,3 +126,5 @@ long double ag_log(double x);
     @return a value of the functions pow(x)
 */
 long double ag_pow(double base, double exp);
+
+#endif  // __FUNC_CORE_FUNC_H__
