@@ -20,7 +20,7 @@ DESCR = "Python framework for solving math & NLP (Natural Language Processing) t
 # add PyPi url after package deploy
 URL = ""
 
-C_SOURCE_EXTENSION = ".c"
+SOURCE_EXTENSION = ".cc"
 WRAPPER_EXTENSION = ".pyx"
 
 
@@ -35,7 +35,7 @@ def generate_extension(path: Path, package: str) -> Exception:
     return Extension(
         package + f".{module_name}",
         [
-            os.path.join(path, f"core/{module_name}{C_SOURCE_EXTENSION}"),
+            os.path.join(path, f"core/{module_name}{SOURCE_EXTENSION}"),
             os.path.join(path, f"{module_name}{WRAPPER_EXTENSION}")
         ]
     )
