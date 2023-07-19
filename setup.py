@@ -10,17 +10,6 @@ from setuptools import (
 )
 
 
-AUTHOR = "Pavel Lyulchak"
-EMAIL = "mediumchak@yandex.ru"
-LICENSE = "MIT"
-NAME = "agrow"
-# keep in sync with actual release tag and PyPI version
-VERSION = "0.0.1"
-# keep in sync with github description
-DESCR = "Python framework for solving math & NLP (Natural Language Processing) tasks"
-# add PyPi url after package deploy
-URL = ""
-
 SOURCE_EXTENSION = ".cc"
 WRAPPER_EXTENSION = ".pyx"
 
@@ -63,13 +52,8 @@ if __name__ == "__main__":
         install_requires=get_requirements(),
         packages=[p for p, _, in PACKAGES_INFO],
         zip_safe=False,
-        name=NAME,
-        version=VERSION,
-        description=DESCR,
-        author=AUTHOR,
-        author_email=EMAIL,
-        url=URL,
-        license=LICENSE,
         cmdclass={"build_ext": build_ext},
-        ext_modules=EXTENSIONS
+        ext_modules=EXTENSIONS,
+        long_description="README.md",
+        long_description_content_type="text/markdown"
     )

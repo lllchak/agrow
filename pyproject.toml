@@ -1,6 +1,22 @@
 [build-system]
 requires = ["Cython", "setuptools", "setuptools-scm"]
 
-[metadata]
-long_description = file: README.md
-long_description_content_type = text/markdown
+[project]
+name = "agrow"
+authors = [
+    {name = "Pavel Lyulchak", email = "mediumchak@yandex.ru"},
+]
+description = "Python framework for solving math & NLP (Natural Language Processing) tasks"
+requires-python = ">=3"
+license = {text = "MIT License"}
+version = "0.0.1"
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent"
+]
+dependencies = [
+    "nltk",
+    "numpy",
+    "Cython",
+]
