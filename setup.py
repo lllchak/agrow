@@ -12,9 +12,10 @@ from setuptools import (
 
 AUTHOR = "Pavel Lyulchak"
 EMAIL = "mediumchak@yandex.ru"
-LICENSE = "MIT Licence"
+LICENSE = "MIT"
 NAME = "agrow"
-VERSION = "0.1"
+# keep in sync with actual release tag and PyPI version
+VERSION = "0.0.1"
 # keep in sync with github description
 DESCR = "Python framework for solving math & NLP (Natural Language Processing) tasks"
 # add PyPi url after package deploy
